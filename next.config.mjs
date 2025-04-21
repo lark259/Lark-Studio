@@ -10,7 +10,9 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/your-repo-name' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Lark-Studio' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/Lark-Studio' : '',
+  trailingSlash: true,
 }
 
 export default nextConfig
