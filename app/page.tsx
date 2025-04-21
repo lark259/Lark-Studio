@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,14 +12,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center">
-              <Image
-                src="/images/logo.png"
+              <img
+                src="/Lark-Studio/images/logo.png"
                 alt="라크네 사진관 로고"
                 width={40}
                 height={40}
                 className="mr-2"
-                priority
-                loading="eager"
               />
               <span className="text-2xl font-bold text-gray-900">라크네 사진관</span>
             </Link>
@@ -59,14 +56,12 @@ export default function Home() {
         <div className="absolute inset-0 opacity-50 bg-gradient-to-b from-black to-transparent"></div>
         <div className="relative z-10 text-center text-white">
           <div className="mb-6">
-            <Image
-              src="/images/logo.png"
+            <img
+              src="/Lark-Studio/images/logo.png"
               alt="라크네 사진관 로고"
               width={120}
               height={120}
               className="mx-auto"
-              priority
-              loading="eager"
             />
           </div>
           <h1 className="text-6xl md:text-8xl font-bold mb-4">라크네 사진관</h1>
