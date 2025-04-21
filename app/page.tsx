@@ -9,7 +9,7 @@ export default function Home() {
       <header className="relative h-screen flex items-center justify-center bg-black">
         <div className="absolute inset-0 opacity-50 bg-gradient-to-b from-black to-transparent"></div>
         <div className="relative z-10 text-center text-white">
-          <h1 className="text-6xl md:text-8xl font-bold mb-4">라크네 사진관</h1>
+          <h1 className="text-8xl md:text-9xl font-bold mb-4">라크네 사진관</h1>
           <p className="text-xl md:text-2xl mb-8">당신의 소중한 순간을 더욱 아름답게</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link 
