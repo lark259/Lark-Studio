@@ -20,7 +20,13 @@ export default function Navigation() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M20 5C25 15 35 20 35 20C35 20 25 25 20 35C15 25 5 20 5 20C5 20 15 15 20 5Z"
+                  d="M8 20C8 20 15 10 20 10C25 10 32 20 32 20C32 20 25 30 20 30C15 30 8 20 8 20Z"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M15 15L12 12M25 15L28 12M15 25L12 28M25 25L28 28"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
