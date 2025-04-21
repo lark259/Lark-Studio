@@ -11,13 +11,13 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center">
-            <div className="relative w-10 h-10 mr-2">
+            <div className="relative w-12 h-12 mr-3">
               <Image
                 src="/Lark-Studio/images/logo.png"
                 alt="라크네 사진관 로고"
-                width={40}
-                height={40}
-                className="object-contain"
+                width={48}
+                height={48}
+                className="object-contain brightness-0"
                 priority
                 unoptimized
               />
