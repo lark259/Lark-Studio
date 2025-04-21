@@ -13,7 +13,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/nav-logo.png"
+              src={`/images/nav-logo.png`}
               alt="라크네 사진관 로고"
               width={40}
               height={40}
