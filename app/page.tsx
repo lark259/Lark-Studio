@@ -22,6 +22,13 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center">
+              <Image
+                src="/images/logo.png"
+                alt="라크네 사진관 로고"
+                width={40}
+                height={40}
+                className="mr-2"
+              />
               <span className="text-2xl font-bold text-gray-900">라크네 사진관</span>
             </Link>
             <div className="flex items-center space-x-4">
@@ -37,6 +44,7 @@ export default function Home() {
               <div className="hidden md:flex space-x-8">
                 <a href="#about" className="text-gray-600 hover:text-gray-900">소개</a>
                 <a href="#services" className="text-gray-600 hover:text-gray-900">서비스</a>
+                <a href="#gallery" className="text-gray-600 hover:text-gray-900">갤러리</a>
                 <a href="#contact" className="text-gray-600 hover:text-gray-900">문의</a>
               </div>
             </div>
@@ -46,6 +54,7 @@ export default function Home() {
             <div className="flex flex-col space-y-4">
               <a href="#about" className="text-gray-600 hover:text-gray-900">소개</a>
               <a href="#services" className="text-gray-600 hover:text-gray-900">서비스</a>
+              <a href="#gallery" className="text-gray-600 hover:text-gray-900">갤러리</a>
               <a href="#contact" className="text-gray-600 hover:text-gray-900">문의</a>
             </div>
           </div>
@@ -56,6 +65,15 @@ export default function Home() {
       <header className="relative h-screen flex items-center justify-center bg-black">
         <div className="absolute inset-0 opacity-50 bg-gradient-to-b from-black to-transparent"></div>
         <div className="relative z-10 text-center text-white">
+          <div className="mb-6">
+            <Image
+              src="/images/logo.png"
+              alt="라크네 사진관 로고"
+              width={120}
+              height={120}
+              className="mx-auto"
+            />
+          </div>
           <h1 className="text-6xl md:text-8xl font-bold mb-4">라크네 사진관</h1>
           <p className="text-xl md:text-2xl">당신의 소중한 순간을 더욱 아름답게</p>
         </div>
