@@ -2,11 +2,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { basePath } from '@/lib/basePath'
 
 export default function Home() {
-  const basePath = '/Lark-Studio';
-
   return (
     <main className="min-h-screen bg-gray-50">
       {/* 헤더 섹션 */}
@@ -15,7 +12,7 @@ export default function Home() {
         <div className="relative z-10 text-center text-white">
           <div className="mb-8">
             <Image
-              src="/Lark-Studio/images/header-logo.png"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/header-logo.png`}
               alt="라크네 사진관 로고"
               width={240}
               height={240}
@@ -70,16 +67,6 @@ export default function Home() {
       {/* 푸터 */}
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <div className="mb-4">
-            <Image
-              src="/images/footer-logo.png"
-              alt="라크네 사진관 로고"
-              width={60}
-              height={60}
-              className="mx-auto"
-              unoptimized
-            />
-          </div>
           <p className="text-sm text-gray-400">© 2024 라크네 사진관. All rights reserved.</p>
         </div>
       </footer>

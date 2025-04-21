@@ -6,7 +6,6 @@ const nextConfig = {
   },
   basePath: '/Lark-Studio',
   assetPrefix: '/Lark-Studio',
-  trailingSlash: true,
 }
 
 module.exports = nextConfig 
