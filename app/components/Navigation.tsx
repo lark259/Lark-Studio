@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const basePath = '/Lark-Studio';
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md">
@@ -12,11 +13,12 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.png"
+              src={`${basePath}/images/logo.png`}
               alt="라크네 사진관 로고"
               width={40}
               height={40}
               className="mr-2"
+              unoptimized
             />
             <span className="text-2xl font-bold text-gray-900">라크네 사진관</span>
           </Link>
