@@ -13,13 +13,14 @@ export default function Home() {
       <header className="relative h-screen flex items-center justify-center bg-black">
         <div className="absolute inset-0 opacity-50 bg-gradient-to-b from-black to-transparent"></div>
         <div className="relative z-10 text-center text-white">
-          <div className="mb-6">
+          <div className="mb-8">
             <Image
-              src="/images/header-logo.png"
+              src="/Lark-Studio/images/header-logo.png"
               alt="라크네 사진관 로고"
-              width={120}
-              height={120}
+              width={240}
+              height={240}
               className="mx-auto"
+              priority
               unoptimized
             />
           </div>
