@@ -17,7 +17,7 @@ export default function Navigation() {
                 alt="라크네 사진관 로고"
                 width={48}
                 height={48}
-                className="object-contain brightness-0"
+                className="object-contain"
                 priority
                 unoptimized
               />
