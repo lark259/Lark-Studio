@@ -22,7 +22,16 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="text-2xl font-bold text-gray-900 dark:text-white">LACNE</Link>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/logo.png"
+                alt="라크네 사진관 로고"
+                width={40}
+                height={40}
+                className="mr-2"
+              />
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">라크네 사진관</span>
+            </Link>
             <div className="flex items-center space-x-4">
               <ThemeToggle />
               <button
@@ -58,8 +67,17 @@ export default function Home() {
       <header className="relative h-screen flex items-center justify-center bg-black">
         <div className="absolute inset-0 opacity-50 bg-gradient-to-b from-black to-transparent"></div>
         <div className="relative z-10 text-center text-white">
-          <h1 className="text-6xl md:text-8xl font-bold mb-4">LACNE</h1>
-          <p className="text-xl md:text-2xl">Professional Photo Retouching Studio</p>
+          <div className="mb-6">
+            <Image
+              src="/images/logo.png"
+              alt="라크네 사진관 로고"
+              width={120}
+              height={120}
+              className="mx-auto"
+            />
+          </div>
+          <h1 className="text-6xl md:text-8xl font-bold mb-4">라크네 사진관</h1>
+          <p className="text-xl md:text-2xl">당신의 소중한 순간을 더욱 아름답게</p>
         </div>
       </header>
 
@@ -260,10 +278,10 @@ export default function Home() {
           <div className="max-w-lg mx-auto">
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
               <div className="flex flex-col space-y-4">
-                <p className="text-gray-600 dark:text-gray-300">📞 전화: 02-1234-5678</p>
-                <p className="text-gray-600 dark:text-gray-300">📱 카카오톡: @lacne</p>
-                <p className="text-gray-600 dark:text-gray-300">📧 이메일: info@lacne.com</p>
-                <p className="text-gray-600 dark:text-gray-300">📍 주소: 서울특별시 강남구 테헤란로 123</p>
+                <p className="text-gray-600 dark:text-gray-300">📞 전화: 010-8646-3081</p>
+                <p className="text-gray-600 dark:text-gray-300">📱 카카오톡: @라크네 사진관</p>
+                <p className="text-gray-600 dark:text-gray-300">📧 이메일: sofu234@naver.com</p>
+                <p className="text-gray-600 dark:text-gray-300">📍 주소: 경기도 수원시 장안구 율전동 182-13 라크네 사진관</p>
               </div>
               <div className="mt-8">
                 <p className="text-gray-600 dark:text-gray-300 mb-4">카카오톡으로 편하게 문의해주세요</p>
@@ -283,7 +301,7 @@ export default function Home() {
       {/* 푸터 */}
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-gray-400">© 2024 LACNE Studio. All rights reserved.</p>
+          <p className="text-sm text-gray-400">© 2024 라크네 사진관. All rights reserved.</p>
           <p className="text-sm text-gray-500 mt-2">✔ 이미지는 작업 샘플로 활용될 수 있습니다.</p>
           <p className="text-sm text-gray-500">✔ 모든 작업은 선결제 후 진행됩니다.</p>
         </div>
