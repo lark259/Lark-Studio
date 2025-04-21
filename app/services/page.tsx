@@ -6,38 +6,53 @@ export default function Services() {
   const services = [
     {
       id: 1,
-      title: '웨딩 패키지',
-      price: '599,000원',
-      description: '웨딩 촬영 2시간, 원본 파일 제공, 보정본 30장, 포토북 1권',
+      title: '사진 보정',
+      price: '5,000원~',
+      description: '전문적인 사진 보정 서비스',
       features: [
-        '전문 웨딩 포토그래퍼',
-        '스튜디오 및 야외 촬영',
-        '헤어 & 메이크업 포함',
-        '고급 앨범 제작',
+        '피부 톤/잡티 보정',
+        '체형 보정',
+        '색감/밝기 보정',
+        '배경 보정/교체'
       ],
     },
     {
       id: 2,
-      title: '프로필 패키지',
-      price: '199,000원',
-      description: '프로필 촬영 1시간, 원본 파일 제공, 보정본 10장',
+      title: '영정사진 리터칭',
+      price: '15,000원~',
+      description: '전문 영정사진 보정 서비스',
       features: [
-        '전문 프로필 포토그래퍼',
-        '다양한 컨셉 연출',
-        '헤어 & 메이크업 포함',
-        '당일 시안 선택',
+        '자연스러운 표정 보정',
+        '의상 및 배경 보정',
+        '흑백/컬러 변환',
+        '고품질 인화 서비스',
+        '액자 제작 가능'
       ],
     },
     {
       id: 3,
-      title: '가족 패키지',
-      price: '299,000원',
-      description: '가족 촬영 1.5시간, 원본 파일 제공, 보정본 20장',
+      title: '손상된 사진 복원',
+      price: '20,000원~',
+      description: '오래되거나 손상된 사진 복원',
       features: [
-        '전문 가족사진 포토그래퍼',
-        '실내/야외 촬영 선택',
-        '액자 1개 제공',
-        '추가 인원 가능',
+        '오래된 사진 복원',
+        '찢어진 사진 복구',
+        '색바램/변색 보정',
+        '흑백사진 복원',
+        '누락된 부분 복원'
+      ],
+    },
+    {
+      id: 4,
+      title: '액자 제작/판매',
+      price: '10,000원~',
+      description: '고급 액자 제작 및 판매',
+      features: [
+        '다양한 사이즈 보유',
+        '고급 원목 프레임',
+        '무반사 아크릴',
+        '맞춤형 제작 가능',
+        'UV 차단 처리'
       ],
     },
   ];
@@ -48,11 +63,11 @@ export default function Services() {
         {/* 헤더 */}
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">서비스 및 가격</h1>
-          <p className="text-xl text-gray-600">최고의 순간을 위한 최상의 서비스를 제공합니다</p>
+          <p className="text-xl text-gray-600">전문적인 보정 기술로 최상의 결과물을 제공합니다</p>
         </header>
 
         {/* 서비스 패키지 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => (
             <div key={service.id} className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
               <div className="p-8">
@@ -72,13 +87,6 @@ export default function Services() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* 예약 버튼 */}
-        <div className="text-center mt-12">
-          <Link href="/contact" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            예약 문의하기
-          </Link>
         </div>
 
         {/* 네비게이션 */}
