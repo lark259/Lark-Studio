@@ -4,7 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/Lark-Studio',
+  basePath: process.env.NODE_ENV === 'production' ? '/Lark-Studio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Lark-Studio/' : '',
 }
 
 module.exports = nextConfig 

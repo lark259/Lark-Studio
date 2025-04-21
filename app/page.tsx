@@ -3,6 +3,8 @@ import React from 'react';
 import Link from 'next/link';
 
 export default function Home() {
+  const basePath = process.env.NODE_ENV === 'production' ? '/Lark-Studio' : '';
+
   return (
     <main className="min-h-screen bg-gray-50">
       {/* 헤더 섹션 */}
@@ -11,7 +13,7 @@ export default function Home() {
         <div className="relative z-10 text-center text-white">
           <div className="mb-6">
             <img
-              src="/images/logo.png"
+              src={`${basePath}/images/logo.png`}
               alt="라크네 사진관 로고"
               width={120}
               height={120}

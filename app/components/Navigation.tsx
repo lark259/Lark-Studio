@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const basePath = process.env.NODE_ENV === 'production' ? '/Lark-Studio' : '';
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md">
@@ -11,7 +12,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center">
             <img
-              src="/images/logo.png"
+              src={`${basePath}/images/logo.png`}
               alt="라크네 사진관 로고"
               width={40}
               height={40}
