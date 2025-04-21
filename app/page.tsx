@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { basePath } from '@/lib/basePath'
 
 export default function Home() {
   const basePath = '/Lark-Studio';
@@ -13,12 +14,13 @@ export default function Home() {
         <div className="absolute inset-0 opacity-50 bg-gradient-to-b from-black to-transparent"></div>
         <div className="relative z-10 text-center text-white">
           <div className="mb-6">
-            <img
+            <Image
               src="/images/logo.png"
               alt="라크네 사진관 로고"
               width={120}
               height={120}
               className="mx-auto"
+              unoptimized
             />
           </div>
           <h1 className="text-6xl md:text-8xl font-bold mb-4">라크네 사진관</h1>
