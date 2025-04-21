@@ -10,6 +10,26 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center">
+            <div className="relative w-10 h-10 mr-2">
+              <svg
+                viewBox="0 0 40 40"
+                className="w-full h-full"
+                fill="none"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M30 20C30 20 25 10 20 10C15 10 10 20 10 20C10 20 15 30 20 30C25 30 30 20 30 20Z"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <circle cx="32" cy="10" r="2" strokeWidth="2" />
+                <circle cx="8" cy="10" r="2" strokeWidth="2" />
+                <circle cx="32" cy="30" r="2" strokeWidth="2" />
+                <circle cx="8" cy="30" r="2" strokeWidth="2" />
+              </svg>
+            </div>
             <span className="text-2xl font-bold text-gray-900">라크네 사진관</span>
           </Link>
           <div className="flex items-center space-x-4">
