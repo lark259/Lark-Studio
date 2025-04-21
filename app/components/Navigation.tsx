@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { basePath } from '@/lib/basePath';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +12,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center">
             <Image
-              src="/Lark-Studio/images/nav-logo.png"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/nav-logo.png`}
               alt="라크네 사진관 로고"
               width={40}
               height={40}
