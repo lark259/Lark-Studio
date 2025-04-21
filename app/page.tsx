@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -10,17 +9,6 @@ export default function Home() {
       <header className="relative h-screen flex items-center justify-center bg-black">
         <div className="absolute inset-0 opacity-50 bg-gradient-to-b from-black to-transparent"></div>
         <div className="relative z-10 text-center text-white">
-          <div className="mb-8">
-            <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/header-logo.png`}
-              alt="라크네 사진관 로고"
-              width={240}
-              height={240}
-              className="mx-auto"
-              priority
-              unoptimized
-            />
-          </div>
           <h1 className="text-6xl md:text-8xl font-bold mb-4">라크네 사진관</h1>
           <p className="text-xl md:text-2xl mb-8">당신의 소중한 순간을 더욱 아름답게</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
