@@ -13,11 +13,12 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center">
             <Image
-              src={`/images/nav-logo.png`}
+              src="/Lark-Studio/images/nav-logo.png"
               alt="라크네 사진관 로고"
               width={40}
               height={40}
               className="mr-2"
+              priority
               unoptimized
             />
             <span className="text-2xl font-bold text-gray-900">라크네 사진관</span>
