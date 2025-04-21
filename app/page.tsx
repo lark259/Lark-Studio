@@ -11,7 +11,7 @@ export default function Home() {
         <div className="relative z-10 text-center text-white">
           <div className="mb-6">
             <img
-              src="/Lark-Studio/images/logo.png"
+              src="/images/logo.png"
               alt="라크네 사진관 로고"
               width={120}
               height={120}

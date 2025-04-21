@@ -11,7 +11,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center">
             <img
-              src="/Lark-Studio/images/logo.png"
+              src="/images/logo.png"
               alt="라크네 사진관 로고"
               width={40}
               height={40}

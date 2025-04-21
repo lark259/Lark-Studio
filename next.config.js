@@ -4,8 +4,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: '/Lark-Studio',
-  basePath: '/Lark-Studio',
 }
 
 module.exports = nextConfig 
