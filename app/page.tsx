@@ -19,6 +19,8 @@ export default function Home() {
                 width={40}
                 height={40}
                 className="mr-2"
+                priority
+                loading="eager"
               />
               <span className="text-2xl font-bold text-gray-900">라크네 사진관</span>
             </Link>
@@ -63,6 +65,8 @@ export default function Home() {
               width={120}
               height={120}
               className="mx-auto"
+              priority
+              loading="eager"
             />
           </div>
           <h1 className="text-6xl md:text-8xl font-bold mb-4">라크네 사진관</h1>
