@@ -15,7 +15,7 @@ export default function Home() {
         <div className="relative z-10 text-center text-white">
           <div className="mb-6">
             <Image
-              src="/images/logo.png"
+              src="/images/header-logo.png"
               alt="라크네 사진관 로고"
               width={120}
               height={120}
@@ -69,6 +69,16 @@ export default function Home() {
       {/* 푸터 */}
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
+          <div className="mb-4">
+            <Image
+              src="/images/footer-logo.png"
+              alt="라크네 사진관 로고"
+              width={60}
+              height={60}
+              className="mx-auto"
+              unoptimized
+            />
+          </div>
           <p className="text-sm text-gray-400">© 2024 라크네 사진관. All rights reserved.</p>
         </div>
       </footer>
