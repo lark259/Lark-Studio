@@ -16,36 +16,36 @@ export default function Services() {
           <div className="space-y-8">
             <div>
               <h3 className="text-xl font-semibold mb-2">기본 보정 – 5,000원</h3>
-              <ul className="list-disc list-inside text-gray-700 ml-4">
-                <li>피부 잡티 제거, 뽀샤시 효과</li>
-                <li>밝기 / 색감 / 대비 조정</li>
-                <li>간단한 주름 제거</li>
+              <ul className="list-none space-y-1 text-gray-700 ml-4">
+                <li>▪ 피부 잡티 제거, 뽀샤시 효과</li>
+                <li>▪ 밝기 / 색감 / 대비 조정</li>
+                <li>▪ 간단한 주름 제거</li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-xl font-semibold mb-2">고급 편집 – 10,000원</h3>
-              <ul className="list-disc list-inside text-gray-700 ml-4">
-                <li>얼굴형, 체형 슬림 보정</li>
-                <li>눈, 코, 턱선 비율 조정</li>
-                <li>헤어라인 정리</li>
-                <li>배경 정리, 단순 물체 제거</li>
-                <li>의상 및 배경 컬러 변경</li>
-                <li>머리카락, 눈동자 색상 변경</li>
-                <li>옷 주름 제거 및 정장 합성</li>
+              <ul className="list-none space-y-1 text-gray-700 ml-4">
+                <li>▪ 얼굴형, 체형 슬림 보정</li>
+                <li>▪ 눈, 코, 턱선 비율 조정</li>
+                <li>▪ 헤어라인 정리</li>
+                <li>▪ 배경 정리, 단순 물체 제거</li>
+                <li>▪ 의상 및 배경 컬러 변경</li>
+                <li>▪ 머리카락, 눈동자 색상 변경</li>
+                <li>▪ 옷 주름 제거 및 정장 합성</li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-xl font-semibold mb-2">합성 작업 – 15,000원</h3>
-              <ul className="list-disc list-inside text-gray-700 ml-4">
-                <li>배경 합성 (스튜디오 느낌, 풍경 등)</li>
-                <li>인물 합성 (여러 컷 합쳐 하나로)</li>
-                <li>얼굴 교체, 표정 교체</li>
+              <ul className="list-none space-y-1 text-gray-700 ml-4">
+                <li>▪ 배경 합성 (스튜디오 느낌, 풍경 등)</li>
+                <li>▪ 인물 합성 (여러 컷 합쳐 하나로)</li>
+                <li>▪ 얼굴 교체, 표정 교체</li>
               </ul>
             </div>
 
-            <div className="text-sm text-gray-600 mt-4">
+            <div className="text-sm text-gray-600 mt-4 space-y-1">
               <p>※ 사진 난이도 및 요청 내용에 따라 추가 요금이 발생할 수 있습니다.</p>
               <p>※ 작업 전 상담 후 최종 견적 안내드립니다.</p>
             </div>
@@ -59,14 +59,16 @@ export default function Services() {
           </h2>
           
           <div className="space-y-6">
-            <div>
-              <p className="text-xl mb-2">영정사진 보정 (기존 사진 리터칭) – 20,000원</p>
-              <p className="text-xl mb-2">사진 합성 (일반 사진 → 영정사진화) – 40,000원</p>
+            <div className="space-y-2">
+              <p className="text-xl">영정사진 보정 (기존 사진 리터칭) – 20,000원</p>
+              <p className="text-xl">사진 합성 (일반 사진 → 영정사진화) – 40,000원</p>
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-4">📦 액자 포함 패키지</h3>
-              <ul className="space-y-2 text-gray-700">
+              <h3 className="text-xl font-semibold mb-4 flex items-center">
+                <span className="mr-2">📦</span> 액자 포함 패키지
+              </h3>
+              <ul className="space-y-3 text-gray-700">
                 <li>8인치 액자 포함 – 120,000원<br/>
                     <span className="text-sm text-gray-600">(사진 편집 + 8인치 사진 인화 + 액자)</span>
                 </li>
@@ -85,12 +87,14 @@ export default function Services() {
           </h2>
           
           <div className="space-y-4">
-            <p className="text-xl">증명사진 촬영 – 25,000원<br/>
-              <span className="text-sm text-gray-600">(9장 인화 및 파일 제공)</span>
-            </p>
-            <p className="text-xl">프로필 사진 촬영 – 100,000원<br/>
-              <span className="text-sm text-gray-600">(30분촬영 3장보정본 제공 및 파일 제공)</span>
-            </p>
+            <div>
+              <p className="text-xl mb-1">증명사진 촬영 – 25,000원</p>
+              <p className="text-sm text-gray-600">(9장 인화 및 파일 제공)</p>
+            </div>
+            <div>
+              <p className="text-xl mb-1">프로필 사진 촬영 – 100,000원</p>
+              <p className="text-sm text-gray-600">(30분 촬영 보정본3장 제공 및 파일 제공)</p>
+            </div>
           </div>
         </section>
 
@@ -100,7 +104,7 @@ export default function Services() {
             <span className="mr-2">📋</span> 사진 인화
           </h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="text-center p-4 bg-gray-50 rounded-lg">
               <p className="font-semibold">4x6</p>
               <p className="text-lg">1,000원</p>

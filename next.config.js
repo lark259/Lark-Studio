@@ -6,6 +6,7 @@ const nextConfig = {
   },
   basePath: process.env.NODE_ENV === 'production' ? '/Lark-Studio' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/Lark-Studio/' : '',
+  trailingSlash: true,
 }
 
 module.exports = nextConfig 
