@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ContactInfo from '../components/ContactInfo';
 
 const galleryImages = [
@@ -70,6 +70,18 @@ const galleryImages = [
 
 export default function Gallery() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
     <main className="min-h-screen bg-gray-50 py-20">
@@ -81,12 +93,12 @@ export default function Gallery() {
             <div 
               key={index}
               className="relative group cursor-pointer"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
+              onMouseEnter={() => !isMobile && setHoveredIndex(index)}
+              onMouseLeave={() => !isMobile && setHoveredIndex(null)}
             >
               <div className="aspect-square relative overflow-hidden rounded-lg shadow-lg">
                 <img
-                  src={hoveredIndex === index ? image.gifSrc : image.staticSrc}
+                  src={isMobile ? image.gifSrc : (hoveredIndex === index ? image.gifSrc : image.staticSrc)}
                   alt={image.alt}
                   className="w-full h-full object-cover transition-opacity duration-300"
                 />
