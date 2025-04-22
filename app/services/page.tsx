@@ -1,11 +1,12 @@
 'use client';
 import React from 'react';
+import ContactInfo from '../components/ContactInfo';
 
 export default function Services() {
   return (
-    <main className="pt-20 pb-16 min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-12">서비스 안내</h1>
+    <main className="min-h-screen bg-white py-20">
+      <div className="container mx-auto px-4 max-w-4xl">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-16">서비스 안내</h1>
         
         {/* 일반 포토샵 작업 섹션 */}
         <section className="mb-12 bg-white p-8 rounded-lg shadow-md">
@@ -124,6 +125,9 @@ export default function Services() {
           </div>
         </section>
       </div>
+
+      {/* 연락처 정보 */}
+      <ContactInfo />
     </main>
   );
 } 

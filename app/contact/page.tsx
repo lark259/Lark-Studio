@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import ContactInfo from '../components/ContactInfo';
 
 export default function ContactPage() {
   return (
@@ -89,6 +90,9 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* 연락처 정보 */}
+      <ContactInfo />
     </main>
   );
 } 
