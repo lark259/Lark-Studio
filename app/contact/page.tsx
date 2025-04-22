@@ -12,39 +12,54 @@ export default function ContactPage() {
         <div className="grid gap-8 md:grid-cols-2">
           {/* 연락처 정보 */}
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
-            <div className="grid gap-8 md:grid-cols-2">
-              {/* 카카오톡 */}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">카카오톡</h3>
-                <p className="text-gray-600">
-                  <a 
-                    href="http://pf.kakao.com/_bEuxfn/friend" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 underline"
-                  >
-                    @라크네사진관
-                  </a>
+            <div className="space-y-8">
+              <div className="grid gap-8 md:grid-cols-2">
+                {/* 카카오톡 */}
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">카카오톡</h3>
+                  <p className="text-gray-600">
+                    <a 
+                      href="http://pf.kakao.com/_bEuxfn/friend" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      @라크네사진관
+                    </a>
+                  </p>
+                </div>
+
+                {/* 전화번호 */}
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">전화번호</h3>
+                  <p className="text-gray-600">010-8646-3081</p>
+                </div>
+
+                {/* 이메일 */}
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">이메일</h3>
+                  <p className="text-gray-600">sofu234@naver.com</p>
+                </div>
+              </div>
+
+              {/* QR 코드 */}
+              <div className="flex justify-center pt-4">
+                <div className="bg-gray-900 p-4 rounded-lg">
+                  <Image
+                    src="/Lark-Studio/images/qr-code.png"
+                    alt="카카오톡 QR 코드"
+                    width={160}
+                    height={160}
+                    className="invert"
+                  />
+                </div>
+              </div>
+
+              <div className="pt-6 border-t border-gray-200">
+                <p className="text-gray-500 text-center">
+                  * 빠른 상담을 원하시면 카카오톡으로 문의해주세요.
                 </p>
               </div>
-
-              {/* 전화번호 */}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">전화번호</h3>
-                <p className="text-gray-600">010-8646-3081</p>
-              </div>
-
-              {/* 이메일 */}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">이메일</h3>
-                <p className="text-gray-600">sofu234@naver.com</p>
-              </div>
-            </div>
-
-            <div className="mt-8 pt-8 border-t border-gray-200">
-              <p className="text-gray-500 text-center">
-                * 빠른 상담을 원하시면 카카오톡으로 문의해주세요.
-              </p>
             </div>
           </div>
 
