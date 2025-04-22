@@ -47,10 +47,11 @@ export default function Gallery() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className={`object-cover ${
-                    hoveredIndex === index ? '' : 'pointer-events-none'
-                  }`}
-                  unoptimized={hoveredIndex === index} // GIF 재생을 위해 hover 상태일 때만 unoptimized 설정
+                  className="object-cover"
+                  unoptimized={hoveredIndex === index}
+                  style={{ 
+                    animationPlayState: hoveredIndex === index ? 'running' : 'paused'
+                  }}
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h3 className="text-white text-lg font-semibold">{image.title}</h3>
