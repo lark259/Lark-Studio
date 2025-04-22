@@ -48,31 +48,28 @@ export default function ContactPage() {
 
               {/* 카카오톡 */}
               <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-8">영업시간</h2>
-                <div className="space-y-4 mb-8">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">평일</span>
-                    <span className="text-gray-900">10:00 - 19:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">토요일</span>
-                    <span className="text-gray-900">10:00 - 17:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">일요일/공휴일</span>
-                    <span className="text-gray-900">예약제</span>
-                  </div>
-                </div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-8">카카오톡 문의</h2>
                 <div className="text-center">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">카카오톡 문의</h3>
-                  <p className="text-gray-600 mb-4">@라크네 사진관</p>
-                  <Image
-                    src="/qr-code.png"
-                    alt="카카오톡 QR 코드"
-                    width={200}
-                    height={200}
-                    className="mx-auto"
-                  />
+                  <p className="text-gray-600 mb-4">
+                    @라크네사진관{' '}
+                    <a 
+                      href="http://pf.kakao.com/_bEuxfn/friend" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      채널 바로가기
+                    </a>
+                  </p>
+                  <div className="bg-gray-900 p-4 rounded-lg inline-block">
+                    <Image
+                      src="/Lark-Studio/images/qr-code.png"
+                      alt="카카오톡 QR 코드"
+                      width={200}
+                      height={200}
+                      className="mx-auto invert"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
