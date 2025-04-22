@@ -45,7 +45,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* 영업시간 및 카카오톡 */}
+              {/* 카카오톡 */}
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-8">영업시간</h2>
                 <div className="space-y-4 mb-8">

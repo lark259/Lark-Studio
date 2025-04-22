@@ -13,7 +13,7 @@ export default function AboutPage() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="p-8">
                 <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                  라크네 사진관은 2020년에 설립된 전문 사진 보정 스튜디오입니다. 
+                  라크네 사진관은 2024년에 설립된 전문 사진 보정 스튜디오입니다. 
                   우리는 고객 한 분 한 분의 소중한 순간을 더욱 아름답게 만들어드리기 위해 
                   최선을 다하고 있습니다.
                 </p>
