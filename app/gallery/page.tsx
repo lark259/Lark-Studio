@@ -12,21 +12,18 @@ const galleryImages = [
     description: '자연스러운 피부 톤과 디테일을 살린 보정'
   },
   {
-    staticSrc: '/Lark-Studio/images/gallery/sample2-static.jpg',
-    gifSrc: '/Lark-Studio/images/gallery/sample2.gif',
+    src: '/Lark-Studio/images/gallery/sample2.gif',
     alt: '샘플 작업 2',
     title: '영정 사진',
     description: '고품질 영정 사진 보정'
   },
   {
-    staticSrc: '/Lark-Studio/images/gallery/sample3-static.jpg',
-    gifSrc: '/Lark-Studio/images/gallery/sample3.gif',
+    src: '/Lark-Studio/images/gallery/sample3.gif',
     alt: '샘플 작업 3',
     title: '프로필 촬영',
     description: '자연스러운 프로필 촬영'
-  },
-  // 추가 이미지들...
-] as const;
+  }
+];
 
 export default function Gallery() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
