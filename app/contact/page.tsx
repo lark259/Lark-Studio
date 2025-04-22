@@ -46,7 +46,7 @@ export default function ContactPage() {
               <div className="flex justify-center pt-4">
                 <div className="bg-gray-900 p-4 rounded-lg">
                   <Image
-                    src="/Lark-Studio/images/qr-code.png"
+                    src="/images/qr-code.png"
                     alt="카카오톡 QR 코드"
                     width={160}
                     height={160}
@@ -84,7 +84,7 @@ export default function ContactPage() {
                 <h3 className="font-semibold text-gray-900 mb-3">[2] 수정 및 요청사항</h3>
                 <ul className="space-y-2">
                   <li>• 최초 1회 간단한 수정 요청은 무료로 지원합니다. (예: 밝기, 색감 조정 등)</li>
-                  <li>• 이후 추가 수정은 별도의 비용이 발생할 수 있습니다. (수정 1회당 ₩10,000 기준)</li>
+                  <li>• 이후 추가 수정은 별도의 비용이 발생할 수 있습니다. (수정 1회당 ₩2,000 기준)</li>
                   <li>• 고객 요청으로 인한 큰 변경사항(예: 다른 사진으로 변경 등)은 새 주문으로 간주될 수 있습니다.</li>
                 </ul>
               </div>
