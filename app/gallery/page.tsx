@@ -4,6 +4,13 @@ import ContactInfo from '../components/ContactInfo';
 
 const galleryImages = [
   {
+    staticSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait3-static.jpg",
+    gifSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait3.gif",
+    alt: "컬러 인물 사진",
+    title: "컬러 인물 사진",
+    description: "자연스러운 표정과 따뜻한 색감의 인물 사진"
+  },
+  {
     staticSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait2-static.jpg",
     gifSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait2.gif",
     alt: "흑백 인물 사진",
