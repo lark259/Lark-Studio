@@ -47,7 +47,7 @@ export default function Gallery() {
           {galleryImages.map((image, index) => (
             <div 
               key={index}
-              className="relative group"
+              className="relative group cursor-pointer"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -56,12 +56,13 @@ export default function Gallery() {
                   src={hoveredIndex === index ? image.gifSrc : image.staticSrc}
                   alt={image.alt}
                   fill
-                  className="object-cover"
-                  unoptimized={hoveredIndex === index}
+                  className="object-cover transition-all duration-300"
+                  unoptimized={true}
                   priority={index === 0}
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h3 className="text-white text-lg font-semibold">{image.title}</h3>
+                  <p className="text-white/90 text-sm mt-1">{image.description}</p>
                 </div>
               </div>
             </div>
