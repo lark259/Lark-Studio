@@ -1,40 +1,74 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
+import ContactInfo from '../components/ContactInfo';
 
-export default function GalleryPage() {
-  const galleryImages = [
-    { id: 1, src: '/gallery/before1.jpg', alt: '보정 전', type: '보정 전' },
-    { id: 2, src: '/gallery/after1.jpg', alt: '보정 후', type: '보정 후' },
-    { id: 3, src: '/gallery/before2.jpg', alt: '복원 전', type: '보정 전' },
-    { id: 4, src: '/gallery/after2.jpg', alt: '복원 후', type: '보정 후' },
-    { id: 5, src: '/gallery/before3.jpg', alt: '영정사진 전', type: '보정 전' },
-    { id: 6, src: '/gallery/after3.jpg', alt: '영정사진 후', type: '보정 후' },
-  ];
+// 갤러리 이미지 데이터
+const galleryImages = [
+  {
+    src: '/Lark-Studio/images/gallery/sample1.gif',
+    alt: '샘플 작업 1',
+    title: '인물 보정',
+    description: '자연스러운 피부 보정과 색감 보정'
+  },
+  {
+    src: '/Lark-Studio/images/gallery/sample2.gif',
+    alt: '샘플 작업 2',
+    title: '영정 사진',
+    description: '고품질 영정 사진 보정'
+  },
+  {
+    src: '/Lark-Studio/images/gallery/sample3.gif',
+    alt: '샘플 작업 3',
+    title: '프로필 촬영',
+    description: '자연스러운 프로필 촬영'
+  },
+  // 추가 이미지들...
+];
+
+export default function Gallery() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <main className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-center text-gray-900 mb-16">갤러리</h1>
+    <main className="min-h-screen bg-gray-50 py-20">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-16">갤러리</h1>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {galleryImages.map((image) => (
-            <div key={image.id} className="relative group">
-              <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+          {galleryImages.map((image, index) => (
+            <div 
+              key={index}
+              className="relative group"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <div className="aspect-square relative overflow-hidden rounded-lg shadow-lg">
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  width={800}
-                  height={600}
-                  className="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-110"
+                  fill
+                  className={`object-cover transition-opacity duration-300 ${
+                    hoveredIndex === index ? 'opacity-100' : 'opacity-100 grayscale'
+                  }`}
+                  unoptimized // GIF 애니메이션을 위해 필요
                 />
-              </div>
-              <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-white text-lg font-semibold">{image.type}</p>
+                <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                  <h3 className="text-white text-xl font-bold mb-2">{image.title}</h3>
+                  <p className="text-gray-200">{image.description}</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
+
+        <div className="text-center mt-12 text-gray-600">
+          <p>* 이미지를 클릭하시면 자세한 작업 내용을 보실 수 있습니다.</p>
+          <p>* 실제 작업물은 상담을 통해 더 자세히 보여드립니다.</p>
+        </div>
       </div>
+
+      {/* 연락처 정보 */}
+      <ContactInfo />
     </main>
   );
 } 
