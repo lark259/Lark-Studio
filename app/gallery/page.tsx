@@ -2,7 +2,6 @@
 import React from 'react';
 import Image from 'next/image';
 import ContactInfo from '../components/ContactInfo';
-import portrait2Static from '../../public/images/gallery/portrait2-static.jpg';
 
 export default function Gallery() {
   return (
@@ -14,10 +13,11 @@ export default function Gallery() {
           <div className="relative group cursor-pointer">
             <div className="aspect-square relative overflow-hidden rounded-lg shadow-lg">
               <Image
-                src={portrait2Static}
+                src="/images/gallery/portrait2-static.jpg"
                 alt="흑백 인물 사진"
-                fill
-                className="object-cover"
+                width={500}
+                height={500}
+                className="object-cover w-full h-full"
                 unoptimized={true}
                 priority
               />
