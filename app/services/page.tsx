@@ -124,10 +124,10 @@ export default function Services() {
             </div>
           </div>
         </section>
-      </div>
 
-      {/* 연락처 정보 */}
-      <ContactInfo />
+        {/* 연락처 정보 */}
+        <ContactInfo />
+      </div>
     </main>
   );
 } 
