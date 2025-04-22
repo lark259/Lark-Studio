@@ -12,7 +12,7 @@ export default function Gallery() {
           <div className="relative group cursor-pointer">
             <div className="aspect-square relative overflow-hidden rounded-lg shadow-lg">
               <img
-                src="/Lark-Studio/images/gallery/portrait2-static.jpg"
+                src="https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait2-static.jpg"
                 alt="흑백 인물 사진"
                 className="w-full h-full object-cover"
               />
