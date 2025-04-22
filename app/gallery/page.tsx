@@ -6,15 +6,15 @@ import ContactInfo from '../components/ContactInfo';
 // 갤러리 이미지 데이터
 const galleryImages = [
   {
-    staticSrc: '/Lark-Studio/images/gallery/portrait2-static.jpg',
-    gifSrc: '/Lark-Studio/images/gallery/portrait2.gif',
+    staticSrc: '/images/gallery/portrait2-static.jpg',
+    gifSrc: '/images/gallery/portrait2.gif',
     alt: '흑백 인물 사진',
     title: '흑백 인물 사진',
     description: '깊이 있는 흑백 톤과 자연스러운 표정'
   },
   {
-    staticSrc: '/Lark-Studio/images/gallery/portrait1-static.jpg',
-    gifSrc: '/Lark-Studio/images/gallery/portrait1.gif',
+    staticSrc: '/images/gallery/portrait1-static.jpg',
+    gifSrc: '/images/gallery/portrait1.gif',
     alt: '인물 사진 작업',
     title: '인물 사진 보정',
     description: '자연스러운 피부 톤과 디테일을 살린 보정'
