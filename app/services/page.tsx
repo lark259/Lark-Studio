@@ -10,8 +10,8 @@ export default function Services() {
         
         <div className="space-y-12">
           {/* 일반 포토샵 작업 섹션 */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold flex items-center gap-2">
+          <section className="bg-white rounded-2xl shadow-lg p-8">
+            <h2 className="text-2xl font-bold flex items-center gap-2 mb-6">
               <span>📋</span>
               <span>일반 포토샵 작업</span>
             </h2>
@@ -56,8 +56,8 @@ export default function Services() {
           </section>
 
           {/* 영정사진 보정 및 액자 가격 섹션 */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold flex items-center gap-2">
+          <section className="bg-white rounded-2xl shadow-lg p-8">
+            <h2 className="text-2xl font-bold flex items-center gap-2 mb-6">
               <span>📋</span>
               <span>영정사진 보정 및 액자 가격</span>
             </h2>
@@ -74,8 +74,8 @@ export default function Services() {
           </section>
 
           {/* 액자 포함 패키지 섹션 */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold flex items-center gap-2">
+          <section className="bg-white rounded-2xl shadow-lg p-8">
+            <h2 className="text-2xl font-bold flex items-center gap-2 mb-6">
               <span>📦</span>
               <span>액자 포함 패키지</span>
             </h2>
@@ -99,8 +99,8 @@ export default function Services() {
           </section>
 
           {/* 사진 촬영 섹션 */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold flex items-center gap-2">
+          <section className="bg-white rounded-2xl shadow-lg p-8">
+            <h2 className="text-2xl font-bold flex items-center gap-2 mb-6">
               <span>📋</span>
               <span>사진 촬영</span>
             </h2>
@@ -119,8 +119,8 @@ export default function Services() {
           </section>
 
           {/* 사진 인화 섹션 */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold flex items-center gap-2">
+          <section className="bg-white rounded-2xl shadow-lg p-8">
+            <h2 className="text-2xl font-bold flex items-center gap-2 mb-6">
               <span>📋</span>
               <span>사진 인화</span>
             </h2>
