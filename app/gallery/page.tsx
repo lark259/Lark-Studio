@@ -1,72 +1,31 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import ContactInfo from '../components/ContactInfo';
 
-// 갤러리 이미지 데이터
-const galleryImages = [
-  {
-    staticSrc: '/images/gallery/portrait2-static.jpg',
-    gifSrc: '/images/gallery/portrait2.gif',
-    alt: '흑백 인물 사진',
-    title: '흑백 인물 사진',
-    description: '깊이 있는 흑백 톤과 자연스러운 표정'
-  },
-  {
-    staticSrc: '/images/gallery/portrait1-static.jpg',
-    gifSrc: '/images/gallery/portrait1.gif',
-    alt: '인물 사진 작업',
-    title: '인물 사진 보정',
-    description: '자연스러운 피부 톤과 디테일을 살린 보정'
-  },
-  {
-    staticSrc: '/Lark-Studio/images/gallery/sample2.gif',
-    gifSrc: '/Lark-Studio/images/gallery/sample2.gif',
-    alt: '샘플 작업 2',
-    title: '영정 사진',
-    description: '고품질 영정 사진 보정'
-  },
-  {
-    staticSrc: '/Lark-Studio/images/gallery/sample3.gif',
-    gifSrc: '/Lark-Studio/images/gallery/sample3.gif',
-    alt: '샘플 작업 3',
-    title: '프로필 촬영',
-    description: '자연스러운 프로필 촬영'
-  }
-];
-
 export default function Gallery() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   return (
     <main className="min-h-screen bg-gray-50 py-20">
       <div className="container mx-auto px-4 max-w-6xl">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-16">갤러리</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {galleryImages.map((image, index) => (
-            <div 
-              key={index}
-              className="relative group cursor-pointer"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              <div className="aspect-square relative overflow-hidden rounded-lg shadow-lg">
-                <Image
-                  src={hoveredIndex === index ? image.gifSrc : image.staticSrc}
-                  alt={image.alt}
-                  fill
-                  className="object-cover transition-all duration-300"
-                  unoptimized={true}
-                  priority={index === 0}
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="text-white text-lg font-semibold">{image.title}</h3>
-                  <p className="text-white/90 text-sm mt-1">{image.description}</p>
-                </div>
+          <div className="relative group cursor-pointer">
+            <div className="aspect-square relative overflow-hidden rounded-lg shadow-lg">
+              <Image
+                src="/Lark-Studio/images/gallery/portrait2-static.jpg"
+                alt="흑백 인물 사진"
+                fill
+                className="object-cover"
+                unoptimized={true}
+                priority
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-white text-lg font-semibold">흑백 인물 사진</h3>
+                <p className="text-white/90 text-sm mt-1">깊이 있는 흑백 톤과 자연스러운 표정</p>
               </div>
             </div>
-          ))}
+          </div>
         </div>
 
         <div className="text-center mt-12 text-gray-600">
