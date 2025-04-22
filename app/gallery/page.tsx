@@ -66,6 +66,20 @@ const galleryImages = [
     alt: "인물 사진 작업",
     title: "인물 사진 작업",
     description: "자연스러운 표정과 분위기를 살린 인물 사진"
+  },
+  {
+    staticSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait10-static.jpg",
+    gifSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait10-static.gif",
+    alt: "인물 사진 작업",
+    title: "인물 사진 작업",
+    description: "자연스러운 표정과 분위기를 살린 인물 사진"
+  },
+  {
+    staticSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait11-static.jpg",
+    gifSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait11-static.gif",
+    alt: "인물 사진 작업",
+    title: "인물 사진 작업",
+    description: "자연스러운 표정과 분위기를 살린 인물 사진"
   }
 ];
 
