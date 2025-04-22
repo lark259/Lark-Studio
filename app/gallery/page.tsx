@@ -6,8 +6,7 @@ import ContactInfo from '../components/ContactInfo';
 // 갤러리 이미지 데이터
 const galleryImages = [
   {
-    staticSrc: '/Lark-Studio/images/gallery/portrait1-static.jpg', // 정지 이미지
-    gifSrc: '/Lark-Studio/images/gallery/portrait1.gif', // GIF 이미지
+    src: '/Lark-Studio/images/gallery/portrait1.gif',
     alt: '인물 사진 작업',
     title: '인물 사진 보정',
     description: '자연스러운 피부 톤과 디테일을 살린 보정'
@@ -27,7 +26,7 @@ const galleryImages = [
     description: '자연스러운 프로필 촬영'
   },
   // 추가 이미지들...
-];
+] as const;
 
 export default function Gallery() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -47,7 +46,7 @@ export default function Gallery() {
             >
               <div className="aspect-square relative overflow-hidden rounded-lg shadow-lg">
                 <Image
-                  src={hoveredIndex === index ? image.gifSrc : image.staticSrc}
+                  src={image.src}
                   alt={image.alt}
                   fill
                   className="object-cover"
