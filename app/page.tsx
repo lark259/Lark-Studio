@@ -23,7 +23,8 @@ export default function Home() {
             />
           </div>
           <h1 className="text-8xl md:text-9xl font-bold mb-4">라크네 사진관</h1>
-          <p className="text-xl md:text-2xl mb-8">당신의 소중한 순간을 더욱 아름답게</p>
+          <p className="text-xl md:text-2xl mb-4">전문가의 섬세한 사진 보정</p>
+          <p className="text-lg md:text-xl mb-8">당신의 소중한 사진을 더욱 빛나게</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link 
               href="/services" 
