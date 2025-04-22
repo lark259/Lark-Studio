@@ -16,7 +16,7 @@ export default function Home() {
               alt="라크네 사진관 로고"
               width={240}
               height={240}
-              className="mx-auto invert"
+              className="mx-auto"
               priority
               unoptimized
             />
