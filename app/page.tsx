@@ -70,7 +70,6 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">연락처 안내</h2>
           <div className="text-center space-y-3">
-            <p className="text-gray-600">전화: 010-8646-3081</p>
             <p className="text-gray-600">
               카카오톡: @라크네사진관{' '}
               <a 

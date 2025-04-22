@@ -13,7 +13,7 @@ export default function ContactPage() {
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-10">
             <div className="grid gap-8 md:grid-cols-2">
               {/* 카카오톡 */}
-              <div>
+              <div className="col-span-2">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">카카오톡</h3>
                 <p className="text-gray-600 dark:text-gray-300">
                   <a 
@@ -27,14 +27,8 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              {/* 전화번호 */}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">전화번호</h3>
-                <p className="text-gray-600 dark:text-gray-300">010-8646-3081</p>
-              </div>
-
               {/* 이메일 */}
-              <div>
+              <div className="col-span-2">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">이메일</h3>
                 <p className="text-gray-600 dark:text-gray-300">sofu234@naver.com</p>
               </div>

@@ -21,9 +21,6 @@ export default function ContactInfo() {
           <p>
             <span className="font-medium">이메일</span>: sofu234@naver.com
           </p>
-          <p>
-            <span className="font-medium">전화</span>: 010-8646-3081
-          </p>
         </div>
         <p className="text-center text-gray-500 mt-8">
           * 빠른 상담을 원하시면 카카오톡으로 문의해주세요.
