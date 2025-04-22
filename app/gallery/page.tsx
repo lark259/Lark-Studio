@@ -6,10 +6,32 @@ import ContactInfo from '../components/ContactInfo';
 // 갤러리 이미지 데이터
 const galleryImages = [
   {
-    src: '/Lark-Studio/images/gallery/portrait2-static.jpg',
+    staticSrc: '/Lark-Studio/images/gallery/portrait2-static.jpg',
+    gifSrc: '/Lark-Studio/images/gallery/portrait2.gif',
     alt: '흑백 인물 사진',
     title: '흑백 인물 사진',
     description: '깊이 있는 흑백 톤과 자연스러운 표정'
+  },
+  {
+    staticSrc: '/Lark-Studio/images/gallery/portrait1-static.jpg',
+    gifSrc: '/Lark-Studio/images/gallery/portrait1.gif',
+    alt: '인물 사진 작업',
+    title: '인물 사진 보정',
+    description: '자연스러운 피부 톤과 디테일을 살린 보정'
+  },
+  {
+    staticSrc: '/Lark-Studio/images/gallery/sample2.gif',
+    gifSrc: '/Lark-Studio/images/gallery/sample2.gif',
+    alt: '샘플 작업 2',
+    title: '영정 사진',
+    description: '고품질 영정 사진 보정'
+  },
+  {
+    staticSrc: '/Lark-Studio/images/gallery/sample3.gif',
+    gifSrc: '/Lark-Studio/images/gallery/sample3.gif',
+    alt: '샘플 작업 3',
+    title: '프로필 촬영',
+    description: '자연스러운 프로필 촬영'
   }
 ];
 
@@ -31,12 +53,16 @@ export default function Gallery() {
             >
               <div className="aspect-square relative overflow-hidden rounded-lg shadow-lg">
                 <Image
-                  src={image.src}
+                  src={hoveredIndex === index ? image.gifSrc : image.staticSrc}
                   alt={image.alt}
                   fill
                   className="object-cover"
-                  priority
+                  unoptimized={hoveredIndex === index}
+                  priority={index === 0}
                 />
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 className="text-white text-lg font-semibold">{image.title}</h3>
+                </div>
               </div>
             </div>
           ))}
