@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function ConsultButton() {
   const handleClick = () => {
-    window.open('https://open.kakao.com/@larkstudio', '_blank');
+    window.open('http://pf.kakao.com/_bEuxfn/friend', '_blank');
   };
 
   return (
