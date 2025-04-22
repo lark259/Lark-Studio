@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import ContactInfo from '../components/ContactInfo';
 
 export default function About() {
   return (
@@ -75,6 +76,9 @@ export default function About() {
           </p>
         </section>
       </div>
+
+      {/* 연락처 정보 */}
+      <ContactInfo />
     </main>
   );
 } 

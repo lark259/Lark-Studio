@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import ContactInfo from './components/ContactInfo';
 
 export default function Home() {
   return (
@@ -63,6 +64,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* 연락처 정보 */}
+      <ContactInfo />
 
       {/* 푸터 */}
       <footer className="bg-gray-900 text-white py-8">
