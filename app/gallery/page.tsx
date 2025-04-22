@@ -6,10 +6,10 @@ import ContactInfo from '../components/ContactInfo';
 // 갤러리 이미지 데이터
 const galleryImages = [
   {
-    src: '/Lark-Studio/images/gallery/sample1.gif',
-    alt: '샘플 작업 1',
-    title: '인물 보정',
-    description: '자연스러운 피부 보정과 색감 보정'
+    src: '/Lark-Studio/images/gallery/portrait1.jpg',
+    alt: '인물 사진 작업',
+    title: '인물 사진 보정',
+    description: '자연스러운 피부 톤과 디테일을 살린 보정'
   },
   {
     src: '/Lark-Studio/images/gallery/sample2.gif',
