@@ -5,113 +5,47 @@ import ContactInfo from '../components/ContactInfo';
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-gray-50 pt-20">
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center text-gray-900 mb-16">문의하기</h1>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* 연락처 정보 */}
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-8">연락처 정보</h2>
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <svg className="w-6 h-6 text-blue-600 mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-1">전화</h3>
-                      <p className="text-gray-600">010-8646-3081</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <svg className="w-6 h-6 text-blue-600 mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-1">이메일</h3>
-                      <p className="text-gray-600">sofu234@naver.com</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <svg className="w-6 h-6 text-blue-600 mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-1">주소</h3>
-                      <p className="text-gray-600">경기도 수원시 장안구 율전동 182-13 라크네 사진관</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* 카카오톡 */}
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-8">카카오톡 문의</h2>
-                <div className="text-center">
-                  <p className="text-gray-600 mb-4">
-                    @라크네사진관{' '}
-                    <a 
-                      href="http://pf.kakao.com/_bEuxfn/friend" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 underline"
-                    >
-                      채널 바로가기
-                    </a>
-                  </p>
-                  <div className="bg-gray-900 p-4 rounded-lg inline-block">
-                    <Image
-                      src="/Lark-Studio/images/qr-code.png"
-                      alt="카카오톡 QR 코드"
-                      width={200}
-                      height={200}
-                      className="mx-auto invert"
-                    />
-                  </div>
-                </div>
-              </div>
+    <div className="min-h-screen bg-gray-50 py-20">
+      <div className="container mx-auto px-4 max-w-4xl">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-16">연락처</h1>
+        
+        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+          <div className="grid gap-8 md:grid-cols-2">
+            {/* 카카오톡 */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-1">카카오톡</h3>
+              <p className="text-gray-600">
+                <a 
+                  href="http://pf.kakao.com/_bEuxfn/friend" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  @라크네사진관
+                </a>
+              </p>
             </div>
 
-            {/* 주의사항 */}
-            <div className="mt-12 bg-gray-100 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">주의사항</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• 모든 작업은 선결제 후 진행됩니다.</li>
-                <li>• 작업 시간은 작업량에 따라 달라질 수 있습니다.</li>
-                <li>• 이미지는 작업 샘플로 활용될 수 있습니다.</li>
-                <li>• 공휴일 작업은 사전 예약이 필요합니다.</li>
-              </ul>
+            {/* 전화번호 */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-1">전화번호</h3>
+              <p className="text-gray-600">010-8646-3081</p>
+            </div>
+
+            {/* 이메일 */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-1">이메일</h3>
+              <p className="text-gray-600">sofu234@naver.com</p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* 연락처 정보 */}
-      <section className="bg-gray-50 py-12">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">연락처 안내</h2>
-          <div className="text-center space-y-3">
-            <p className="text-gray-600">전화: 010-8646-3081</p>
-            <p className="text-gray-600">
-              카카오톡: @라크네사진관{' '}
-              <a 
-                href="http://pf.kakao.com/_bEuxfn/friend" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800 underline"
-              >
-                채널 바로가기
-              </a>
+          <div className="mt-8 pt-8 border-t border-gray-200">
+            <p className="text-gray-500 text-center">
+              * 빠른 상담을 원하시면 카카오톡으로 문의해주세요.
             </p>
-            <p className="text-gray-600">이메일: sofu234@naver.com</p>
           </div>
-          <p className="text-center text-gray-500 mt-8">
-            * 빠른 상담을 원하시면 카카오톡으로 문의해주세요.
-          </p>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 } 
