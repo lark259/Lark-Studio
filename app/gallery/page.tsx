@@ -12,7 +12,7 @@ const galleryImages = [
     description: '자연스러운 피부 톤과 디테일을 살린 보정'
   },
   {
-    src: '/Lark-Studio/images/gallery/portrait2.jpg',
+    src: '/Lark-Studio/images/gallery/portrait2-static.jpg',
     alt: '흑백 인물 사진',
     title: '흑백 인물 사진',
     description: '깊이 있는 흑백 톤과 자연스러운 표정'
