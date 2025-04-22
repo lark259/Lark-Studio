@@ -44,8 +44,15 @@ export default function Navigation() {
             <div className="hidden md:flex space-x-8">
               <Link href="/about" className="text-gray-300 hover:text-white">소개</Link>
               <Link href="/services" className="text-gray-300 hover:text-white">서비스</Link>
-              <Link href="/gallery" className="text-gray-300 hover:text-white">갤러리</Link>
-              <Link href="/contact" className="text-gray-300 hover:text-white">문의</Link>
+              <Link href="/gallery" className={`${pathname === '/gallery' ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'}`}>
+                갤러리
+              </Link>
+              <Link href="/faq" className={`${pathname === '/faq' ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'}`}>
+                FAQ
+              </Link>
+              <Link href="/contact" className={`${pathname === '/contact' ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'}`}>
+                문의
+              </Link>
             </div>
           </div>
         </div>
@@ -55,6 +62,7 @@ export default function Navigation() {
             <Link href="/about" className="text-gray-300 hover:text-white">소개</Link>
             <Link href="/services" className="text-gray-300 hover:text-white">서비스</Link>
             <Link href="/gallery" className="text-gray-300 hover:text-white">갤러리</Link>
+            <Link href="/faq" className="text-gray-300 hover:text-white">FAQ</Link>
             <Link href="/contact" className="text-gray-300 hover:text-white">문의</Link>
           </div>
         </div>
