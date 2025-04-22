@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import Image from 'next/image';
 import ContactInfo from '../components/ContactInfo';
 
 export default function Gallery() {
@@ -12,14 +11,10 @@ export default function Gallery() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="relative group cursor-pointer">
             <div className="aspect-square relative overflow-hidden rounded-lg shadow-lg">
-              <Image
-                src="/images/gallery/portrait2-static.jpg"
+              <img
+                src="/Lark-Studio/images/gallery/portrait2-static.jpg"
                 alt="흑백 인물 사진"
-                width={500}
-                height={500}
-                className="object-cover w-full h-full"
-                unoptimized={true}
-                priority
+                className="w-full h-full object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <h3 className="text-white text-lg font-semibold">흑백 인물 사진</h3>
