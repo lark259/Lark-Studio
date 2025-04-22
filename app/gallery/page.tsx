@@ -4,6 +4,8 @@ import Image from 'next/image';
 import ContactInfo from '../components/ContactInfo';
 
 export default function Gallery() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  
   return (
     <main className="min-h-screen bg-gray-50 py-20">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -13,7 +15,7 @@ export default function Gallery() {
           <div className="relative group cursor-pointer">
             <div className="aspect-square relative overflow-hidden rounded-lg shadow-lg">
               <Image
-                src="/Lark-Studio/images/gallery/portrait2-static.jpg"
+                src={`${basePath}/images/gallery/portrait2-static.jpg`}
                 alt="흑백 인물 사진"
                 fill
                 className="object-cover"
