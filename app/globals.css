@@ -24,6 +24,14 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* 한글 텍스트 줄바꿈 개선 */
+h1, h2, h3, h4, h5, h6, p, li, a {
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* 다크모드 대응 */
