@@ -12,7 +12,7 @@ export default function Home() {
         <div className="relative z-10 text-center text-white">
           <div className="mb-8">
             <Image
-              src="/Lark-Studio/images/main-logo.png"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/main-logo.png`}
               alt="라크네 사진관 로고"
               width={240}
               height={240}
