@@ -47,14 +47,13 @@ export default function Gallery() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className={`object-cover transition-opacity duration-300 ${
-                    hoveredIndex === index ? 'opacity-100' : 'opacity-100 grayscale'
+                  className={`object-cover ${
+                    hoveredIndex === index ? '' : 'pointer-events-none'
                   }`}
-                  unoptimized // GIF 애니메이션을 위해 필요
+                  unoptimized={hoveredIndex === index} // GIF 재생을 위해 hover 상태일 때만 unoptimized 설정
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                  <h3 className="text-white text-xl font-bold mb-2">{image.title}</h3>
-                  <p className="text-gray-200">{image.description}</p>
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 className="text-white text-lg font-semibold">{image.title}</h3>
                 </div>
               </div>
             </div>
@@ -62,7 +61,7 @@ export default function Gallery() {
         </div>
 
         <div className="text-center mt-12 text-gray-600">
-          <p>* 이미지를 클릭하시면 자세한 작업 내용을 보실 수 있습니다.</p>
+          <p>* 이미지에 마우스를 올리면 상세한 작업 내용을 보실 수 있습니다.</p>
           <p>* 실제 작업물은 상담을 통해 더 자세히 보여드립니다.</p>
         </div>
       </div>
