@@ -9,80 +9,140 @@ export default function Services() {
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-16">서비스 안내</h1>
         
         <div className="space-y-12">
-          {/* 촬영 서비스 */}
-          <section className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">촬영 서비스</h2>
-            <div className="space-y-6 text-lg text-gray-700">
-              <p className="leading-relaxed">
-                자연스러운 표정과 포즈를 담아내는 인물 사진 촬영 서비스를 제공합니다.
-                편안한 분위기 속에서 고객님의 가장 아름다운 모습을 담아드립니다.
-              </p>
-              <ul className="list-disc list-inside space-y-4 ml-4">
-                <li>인물 사진 촬영</li>
-                <li>프로필 사진 촬영</li>
-                <li>가족 사진 촬영</li>
-                <li>커플 사진 촬영</li>
-              </ul>
-            </div>
-          </section>
-
-          {/* 보정 서비스 */}
-          <section className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">보정 서비스</h2>
-            <div className="space-y-6 text-lg text-gray-700">
-              <p className="leading-relaxed">
-                자연스러운 보정으로 더욱 돋보이는 사진을 만들어드립니다.
-                과도한 보정 없이 본연의 매력을 살리는 것을 중요하게 생각합니다.
-              </p>
-              <ul className="list-disc list-inside space-y-4 ml-4">
-                <li>피부 톤 보정</li>
-                <li>색감 보정</li>
-                <li>분위기 보정</li>
-                <li>특수 효과 보정</li>
-              </ul>
-            </div>
-          </section>
-
-          {/* 가격 안내 */}
-          <section className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">가격 안내</h2>
-            <div className="space-y-6 text-lg text-gray-700">
-              <div className="grid gap-6">
-                <div className="flex justify-between items-center border-b border-gray-200 pb-4">
-                  <span className="font-medium">기본 촬영 (30분)</span>
-                  <span>50,000원</span>
-                </div>
-                <div className="flex justify-between items-center border-b border-gray-200 pb-4">
-                  <span className="font-medium">프리미엄 촬영 (1시간)</span>
-                  <span>100,000원</span>
-                </div>
-                <div className="flex justify-between items-center border-b border-gray-200 pb-4">
-                  <span className="font-medium">기본 보정 (장당)</span>
-                  <span>10,000원</span>
-                </div>
-                <div className="flex justify-between items-center border-b border-gray-200 pb-4">
-                  <span className="font-medium">프리미엄 보정 (장당)</span>
-                  <span>20,000원</span>
-                </div>
+          {/* 일반 포토샵 작업 섹션 */}
+          <section className="space-y-6">
+            <h2 className="text-2xl font-bold flex items-center gap-2">
+              <span>📋</span>
+              <span>일반 포토샵 작업</span>
+            </h2>
+            
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">기본 보정 – 5,000원</h3>
+                <ul className="list-inside space-y-2 text-gray-700">
+                  <li>▪ 피부 잡티 제거, 뽀샤시 효과</li>
+                  <li>▪ 밝기 / 색감 / 대비 조정</li>
+                  <li>▪ 간단한 주름 제거</li>
+                </ul>
               </div>
-              <p className="text-gray-500 mt-4">
-                * 상세한 가격은 상담을 통해 안내해 드립니다.
-              </p>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">고급 편집 – 10,000원</h3>
+                <ul className="list-inside space-y-2 text-gray-700">
+                  <li>▪ 얼굴형, 체형 슬림 보정</li>
+                  <li>▪ 눈, 코, 턱선 비율 조정</li>
+                  <li>▪ 헤어라인 정리</li>
+                  <li>▪ 배경 정리, 단순 물체 제거</li>
+                  <li>▪ 의상 및 배경 컬러 변경</li>
+                  <li>▪ 머리카락, 눈동자 색상 변경</li>
+                  <li>▪ 옷 주름 제거 및 정장 합성</li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">합성 작업 – 15,000원</h3>
+                <ul className="list-inside space-y-2 text-gray-700">
+                  <li>▪ 배경 합성 (스튜디오 느낌, 풍경 등)</li>
+                  <li>▪ 인물 합성 (여러 컷 합쳐 하나로)</li>
+                  <li>▪ 얼굴 교체, 표정 교체</li>
+                </ul>
+              </div>
+
+              <div className="text-sm text-gray-500 space-y-1">
+                <p>※ 사진 난이도 및 요청 내용에 따라 추가 요금이 발생할 수 있습니다.</p>
+                <p>※ 작업 전 상담 후 최종 견적 안내드립니다.</p>
+              </div>
             </div>
           </section>
 
-          {/* 예약 안내 */}
-          <section className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">예약 안내</h2>
-            <div className="space-y-6 text-lg text-gray-700">
-              <p className="leading-relaxed">
-                촬영은 예약제로 진행됩니다. 아래 연락처로 문의해 주시면 상세한 안내를 도와드리겠습니다.
-              </p>
-              <div className="bg-gray-50 rounded-xl p-6 space-y-4">
-                <p className="font-medium">예약 및 문의</p>
-                <p>전화: 010-1234-5678</p>
-                <p>이메일: contact@larkstudio.com</p>
-                <p>카카오톡: @larkstudio</p>
+          {/* 영정사진 보정 및 액자 가격 섹션 */}
+          <section className="space-y-6">
+            <h2 className="text-2xl font-bold flex items-center gap-2">
+              <span>📋</span>
+              <span>영정사진 보정 및 액자 가격</span>
+            </h2>
+            
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">영정사진 보정 (기존 사진 리터칭) – 20,000원</h3>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">사진 합성 (일반 사진 → 영정사진화) – 40,000원</h3>
+              </div>
+            </div>
+          </section>
+
+          {/* 액자 포함 패키지 섹션 */}
+          <section className="space-y-6">
+            <h2 className="text-2xl font-bold flex items-center gap-2">
+              <span>📦</span>
+              <span>액자 포함 패키지</span>
+            </h2>
+            
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">8인치 액자 포함 – 120,000원</h3>
+                <p className="text-gray-700">(사진 편집 + 8인치 사진 인화 + 액자)</p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">11인치 액자 포함 – 150,000원</h3>
+                <p className="text-gray-700">(사진 편집 + 11인치 사진 인화 + 액자)</p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">8/11인치 액자 포함 – 180,000원</h3>
+                <p className="text-gray-700">(사진 편집 + 8/11인치 사진 인화 + 액자)</p>
+              </div>
+            </div>
+          </section>
+
+          {/* 사진 촬영 섹션 */}
+          <section className="space-y-6">
+            <h2 className="text-2xl font-bold flex items-center gap-2">
+              <span>📋</span>
+              <span>사진 촬영</span>
+            </h2>
+            
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">증명사진 촬영 – 25,000원</h3>
+                <p className="text-gray-700">(9장 인화 및 파일 제공)</p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">프로필 사진 촬영 – 100,000원</h3>
+                <p className="text-gray-700">(30분 촬영 보정본3장 제공 및 파일 제공)</p>
+              </div>
+            </div>
+          </section>
+
+          {/* 사진 인화 섹션 */}
+          <section className="space-y-6">
+            <h2 className="text-2xl font-bold flex items-center gap-2">
+              <span>📋</span>
+              <span>사진 인화</span>
+            </h2>
+            
+            <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <h3 className="font-semibold">4x6</h3>
+                  <p className="text-gray-700">1,000원</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold">5x7</h3>
+                  <p className="text-gray-700">2,000원</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold">8x10</h3>
+                  <p className="text-gray-700">10,000원</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold">11x14</h3>
+                  <p className="text-gray-700">15,000원</p>
+                </div>
               </div>
             </div>
           </section>
