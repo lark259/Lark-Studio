@@ -36,13 +36,13 @@ export default function ContactPage() {
 
             {/* QR 코드 */}
             <div className="flex justify-center pt-4">
-              <div className="bg-gray-900 dark:bg-gray-700 p-4 rounded-lg">
+              <div className="bg-transparent p-4 rounded-lg">
                 <Image
-                  src="/Lark-Studio/images/qr-code.png"
+                  src="/Lark-Studio/images/qr-white.png"
                   alt="카카오톡 QR 코드"
                   width={160}
                   height={160}
-                  className="invert dark:invert-0"
+                  className="dark:invert"
                   priority
                   unoptimized
                 />
