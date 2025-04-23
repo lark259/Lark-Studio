@@ -38,7 +38,7 @@ export default function ContactPage() {
             <div className="flex justify-center pt-4">
               <div className="bg-gray-900 dark:bg-gray-700 p-4 rounded-lg">
                 <Image
-                  src="/qr-code.png"
+                  src="/Lark-Studio/images/qr-code.png"
                   alt="카카오톡 QR 코드"
                   width={160}
                   height={160}
