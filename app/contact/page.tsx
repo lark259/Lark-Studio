@@ -55,21 +55,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* QR 코드 */}
-            <div className="flex justify-center pt-4">
-              <div className="bg-transparent p-4 rounded-lg">
-                <Image
-                  src="/Lark-Studio/images/qr-white.png"
-                  alt="카카오톡 QR 코드"
-                  width={160}
-                  height={160}
-                  className="dark:invert"
-                  priority
-                  unoptimized
-                />
-              </div>
-            </div>
-
             <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
               <p className="text-gray-500 dark:text-gray-400 text-center">
                 * 빠른 상담을 원하시면 카카오톡으로 문의해주세요.
