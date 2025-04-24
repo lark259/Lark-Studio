@@ -3,9 +3,6 @@ import React from 'react';
 import Image from 'next/image';
 
 const galleryItems = [
-  { id: 1, static: 'portrait1-static.jpg', gif: 'portrait1.gif', title: '인물 보정' },
-  { id: 2, static: 'portrait2-static.jpg', gif: 'portrait2.gif', title: '영정사진' },
-  { id: 3, static: 'portrait3-static.jpg', gif: 'portrait3.gif', title: '프로필' },
   { id: 4, static: 'portrait4-static.jpg', gif: 'portrait4.gif', title: '인물 보정' },
   { id: 5, static: 'portrait5-static.jpg', gif: 'portrait5.gif', title: '프로필' },
   { id: 6, static: 'portrait6-static.jpg', gif: 'portrait6.gif', title: '영정사진' },
