@@ -14,6 +14,15 @@ const galleryItems = [
   { id: 9, static: 'portrait9-static.jpg', gif: 'portrait9.gif', title: '영정사진' },
   { id: 10, static: 'portrait10-static.jpg', gif: 'portrait10.gif', title: '인물 보정' },
   { id: 11, static: 'portrait11-static.jpg', gif: 'portrait11.gif', title: '프로필' },
+  { id: 12, static: 'portrait12-static.jpg', gif: 'portrait12.gif', title: '인물 보정' },
+  { id: 13, static: 'portrait13-static.jpg', gif: 'portrait13.gif', title: '프로필' },
+  { id: 14, static: 'portrait14-static.jpg', gif: 'portrait14.gif', title: '영정사진' },
+  { id: 15, static: 'portrait15-static.jpg', gif: 'portrait15.gif', title: '인물 보정' },
+  { id: 16, static: 'portrait16-static.jpg', gif: 'portrait16.gif', title: '프로필' },
+  { id: 17, static: 'portrait17-static.jpg', gif: 'portrait17.gif', title: '영정사진' },
+  { id: 18, static: 'portrait18-static.jpg', gif: 'portrait18.gif', title: '인물 보정' },
+  { id: 19, static: 'portrait19-static.jpg', gif: 'portrait19.gif', title: '프로필' },
+  { id: 20, static: 'portrait20-static.jpg', gif: 'portrait20.gif', title: '영정사진' },
 ];
 
 export default function GalleryPage() {
