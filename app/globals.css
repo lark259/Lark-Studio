@@ -55,4 +55,28 @@ h1, h2, h3, h4, h5, h6, p, li, a {
   .dark\:bg-gray-800 {
     background-color: rgb(31, 41, 55);
   }
+}
+
+/* 반응형 텍스트 크기 조정 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.25rem; /* 36px */
+  }
+  h2 {
+    font-size: 1.875rem; /* 30px */
+  }
+  h3 {
+    font-size: 1.5rem; /* 24px */
+  }
+  p, li, a {
+    font-size: 1rem; /* 16px */
+  }
+}
+
+/* 반응형 레이아웃 조정 */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 } 

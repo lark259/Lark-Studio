@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://lacne.com
+
+# Sitemaps
+Sitemap: https://lacne.com/sitemap.xml
