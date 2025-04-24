@@ -1,155 +1,61 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import ContactInfo from '../components/ContactInfo';
-import ImageModal from '../components/ImageModal';
+import React from 'react';
+import Image from 'next/image';
 
-const galleryImages = [
-  {
-    staticSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait1-static.jpg",
-    gifSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait1.gif",
-    alt: "인물 사진 작업",
-    title: "인물 사진 보정",
-    description: "자연스러운 피부 톤과 디테일을 살린 보정"
-  },
-  {
-    staticSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait2-static.jpg",
-    gifSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait2.gif",
-    alt: "흑백 인물 사진",
-    title: "흑백 인물 사진",
-    description: "깊이 있는 흑백 톤과 자연스러운 표정"
-  },
-  {
-    staticSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait3-static.jpg",
-    gifSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait3.gif",
-    alt: "컬러 인물 사진",
-    title: "컬러 인물 사진",
-    description: "자연스러운 표정과 따뜻한 색감의 인물 사진"
-  },
-  {
-    staticSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait4-static.jpg",
-    gifSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait4.gif",
-    alt: "인물 사진 작업",
-    title: "인물 사진 작업",
-    description: "자연스러운 표정과 분위기를 살린 인물 사진"
-  },
-  {
-    staticSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait5-static.jpg",
-    gifSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait5.gif",
-    alt: "인물 사진 작업",
-    title: "인물 사진 작업",
-    description: "자연스러운 표정과 따뜻한 분위기의 인물 사진"
-  },
-  {
-    staticSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait6-static.jpg",
-    gifSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait6.gif",
-    alt: "인물 사진 작업",
-    title: "인물 사진 작업",
-    description: "자연스러운 표정과 분위기를 살린 인물 사진"
-  },
-  {
-    staticSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait7-static.jpg",
-    gifSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait7-static.gif",
-    alt: "인물 사진 작업",
-    title: "인물 사진 작업",
-    description: "자연스러운 표정과 분위기를 살린 인물 사진"
-  },
-  {
-    staticSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait8-static.jpg",
-    gifSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait8-static.gif",
-    alt: "인물 사진 작업",
-    title: "인물 사진 작업",
-    description: "자연스러운 표정과 분위기를 살린 인물 사진"
-  },
-  {
-    staticSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait9-static.jpg",
-    gifSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait9-static.gif",
-    alt: "인물 사진 작업",
-    title: "인물 사진 작업",
-    description: "자연스러운 표정과 분위기를 살린 인물 사진"
-  },
-  {
-    staticSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait10-static.jpg",
-    gifSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait10-static.gif",
-    alt: "인물 사진 작업",
-    title: "인물 사진 작업",
-    description: "자연스러운 표정과 분위기를 살린 인물 사진"
-  },
-  {
-    staticSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait11-static.jpg",
-    gifSrc: "https://raw.githubusercontent.com/lark259/Lark-Studio/main/public/images/gallery/portrait11-static.gif",
-    alt: "인물 사진 작업",
-    title: "인물 사진 작업",
-    description: "자연스러운 표정과 분위기를 살린 인물 사진"
-  }
+const galleryItems = [
+  { id: 1, static: 'portrait1-static.jpg', gif: 'portrait1.gif', title: '인물 보정' },
+  { id: 2, static: 'portrait2-static.jpg', gif: 'portrait2.gif', title: '영정사진' },
+  { id: 3, static: 'portrait3-static.jpg', gif: 'portrait3.gif', title: '프로필' },
+  { id: 4, static: 'portrait4-static.jpg', gif: 'portrait4.gif', title: '인물 보정' },
+  { id: 5, static: 'portrait5-static.jpg', gif: 'portrait5.gif', title: '프로필' },
+  { id: 6, static: 'portrait6-static.jpg', gif: 'portrait6.gif', title: '영정사진' },
+  { id: 7, static: 'portrait7-static.jpg', gif: 'portrait7.gif', title: '인물 보정' },
+  { id: 8, static: 'portrait8-static.jpg', gif: 'portrait8.gif', title: '프로필' },
+  { id: 9, static: 'portrait9-static.jpg', gif: 'portrait9.gif', title: '영정사진' },
+  { id: 10, static: 'portrait10-static.jpg', gif: 'portrait10.gif', title: '인물 보정' },
+  { id: 11, static: 'portrait11-static.jpg', gif: 'portrait11.gif', title: '프로필' },
 ];
 
-export default function Gallery() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
-  const [selectedImage, setSelectedImage] = useState<null | typeof galleryImages[0]>(null);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
+export default function GalleryPage() {
   return (
-    <>
-      <main className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-16">갤러리</h1>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {galleryImages.map((image, index) => (
-              <div 
-                key={index}
-                className="relative group cursor-pointer"
-                onMouseEnter={() => !isMobile && setHoveredIndex(index)}
-                onMouseLeave={() => !isMobile && setHoveredIndex(null)}
-                onClick={() => setSelectedImage(image)}
-              >
-                <div className="aspect-square relative overflow-hidden rounded-lg shadow-lg">
-                  <img
-                    src={isMobile ? image.gifSrc : (hoveredIndex === index ? image.gifSrc : image.staticSrc)}
-                    alt={image.alt}
-                    className="w-full h-full object-cover transition-all duration-300 hover:scale-105"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 className="text-white text-lg font-semibold">{image.title}</h3>
-                    <p className="text-white/90 text-sm mt-1">{image.description}</p>
-                  </div>
-                </div>
+    <div className="min-h-screen bg-gray-50 py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-16">작업 갤러리</h1>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {galleryItems.map((item) => (
+            <div key={item.id} className="relative group overflow-hidden rounded-lg shadow-lg">
+              <div className="relative w-full h-[400px]">
+                <Image
+                  src={`/Lark-Studio/images/gallery/${item.static}`}
+                  alt={`갤러리 이미지 ${item.id}`}
+                  fill
+                  className="object-cover transition-opacity duration-300 group-hover:opacity-0"
+                  priority={item.id <= 6}
+                  unoptimized
+                />
+                <Image
+                  src={`/Lark-Studio/images/gallery/${item.gif}`}
+                  alt={`갤러리 이미지 ${item.id} (움직이는)`}
+                  fill
+                  className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  priority={item.id <= 6}
+                  unoptimized
+                />
               </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12 text-gray-600">
-            <p>* 이미지를 클릭하면 크게 보실 수 있습니다.</p>
-            <p>* 실제 작업물은 상담을 통해 더 자세히 보여드립니다.</p>
-          </div>
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+                <p className="text-white text-lg font-semibold">{item.title}</p>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* 연락처 정보 */}
-        <ContactInfo />
-      </main>
-
-      {/* 이미지 모달 */}
-      <ImageModal
-        isOpen={!!selectedImage}
-        onClose={() => setSelectedImage(null)}
-        image={selectedImage ? {
-          src: isMobile ? selectedImage.gifSrc : selectedImage.staticSrc,
-          alt: selectedImage.alt,
-          title: selectedImage.title,
-          description: selectedImage.description
-        } : null}
-      />
-    </>
+        <div className="text-center mt-16">
+          <p className="text-gray-600">
+            * 마우스를 올리면 Before/After를 확인하실 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
   );
 } 
