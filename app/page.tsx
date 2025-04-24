@@ -71,14 +71,13 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">작업 갤러리</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="relative group overflow-hidden rounded-lg">
-              <div className="aspect-w-4 aspect-h-3">
+            <div className="relative group overflow-hidden rounded-lg shadow-lg">
+              <div className="relative w-full h-[300px]">
                 <Image
-                  src="/Lark-Studio/images/gallery/portrait1-static.jpg"
+                  src="/Lark-Studio/images/gallery/portrait10-static.jpg"
                   alt="갤러리 이미지 1"
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, 33vw"
                   priority
                   unoptimized
                 />
@@ -87,14 +86,13 @@ export default function Home() {
                 <span className="text-white text-lg font-semibold">인물 보정</span>
               </div>
             </div>
-            <div className="relative group overflow-hidden rounded-lg">
-              <div className="aspect-w-4 aspect-h-3">
+            <div className="relative group overflow-hidden rounded-lg shadow-lg">
+              <div className="relative w-full h-[300px]">
                 <Image
-                  src="/Lark-Studio/images/gallery/portrait2-static.jpg"
+                  src="/Lark-Studio/images/gallery/portrait11-static.jpg"
                   alt="갤러리 이미지 2"
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, 33vw"
                   priority
                   unoptimized
                 />
@@ -103,14 +101,13 @@ export default function Home() {
                 <span className="text-white text-lg font-semibold">영정사진</span>
               </div>
             </div>
-            <div className="relative group overflow-hidden rounded-lg">
-              <div className="aspect-w-4 aspect-h-3">
+            <div className="relative group overflow-hidden rounded-lg shadow-lg">
+              <div className="relative w-full h-[300px]">
                 <Image
-                  src="/Lark-Studio/images/gallery/portrait3-static.jpg"
+                  src="/Lark-Studio/images/gallery/portrait9-static.jpg"
                   alt="갤러리 이미지 3"
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, 33vw"
                   priority
                   unoptimized
                 />
