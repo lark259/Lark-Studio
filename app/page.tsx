@@ -1,10 +1,23 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ContactInfo from './components/ContactInfo';
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <main className="min-h-screen bg-gray-50">
       {/* 헤더 섹션 */}
@@ -73,62 +86,101 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="relative group overflow-hidden rounded-lg shadow-lg">
               <div className="relative w-full h-[300px]">
-                <Image
-                  src="/Lark-Studio/images/gallery/portrait1-static.jpg"
-                  alt="갤러리 이미지 1"
-                  fill
-                  className="object-cover transition-opacity duration-300 group-hover:opacity-0"
-                  priority
-                  unoptimized
-                />
-                <Image
-                  src="/Lark-Studio/images/gallery/portrait1.gif"
-                  alt="갤러리 이미지 1 (움직이는)"
-                  fill
-                  className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  priority
-                  unoptimized
-                />
+                {isMobile ? (
+                  <Image
+                    src="/Lark-Studio/images/gallery/portrait1.gif"
+                    alt="갤러리 이미지 1"
+                    fill
+                    className="object-cover"
+                    priority
+                    unoptimized
+                  />
+                ) : (
+                  <>
+                    <Image
+                      src="/Lark-Studio/images/gallery/portrait1-static.jpg"
+                      alt="갤러리 이미지 1"
+                      fill
+                      className="object-cover transition-opacity duration-300 group-hover:opacity-0"
+                      priority
+                      unoptimized
+                    />
+                    <Image
+                      src="/Lark-Studio/images/gallery/portrait1.gif"
+                      alt="갤러리 이미지 1 (움직이는)"
+                      fill
+                      className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      priority
+                      unoptimized
+                    />
+                  </>
+                )}
               </div>
             </div>
             <div className="relative group overflow-hidden rounded-lg shadow-lg">
               <div className="relative w-full h-[300px]">
-                <Image
-                  src="/Lark-Studio/images/gallery/portrait2-static.jpg"
-                  alt="갤러리 이미지 2"
-                  fill
-                  className="object-cover transition-opacity duration-300 group-hover:opacity-0"
-                  priority
-                  unoptimized
-                />
-                <Image
-                  src="/Lark-Studio/images/gallery/portrait2.gif"
-                  alt="갤러리 이미지 2 (움직이는)"
-                  fill
-                  className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  priority
-                  unoptimized
-                />
+                {isMobile ? (
+                  <Image
+                    src="/Lark-Studio/images/gallery/portrait2.gif"
+                    alt="갤러리 이미지 2"
+                    fill
+                    className="object-cover"
+                    priority
+                    unoptimized
+                  />
+                ) : (
+                  <>
+                    <Image
+                      src="/Lark-Studio/images/gallery/portrait2-static.jpg"
+                      alt="갤러리 이미지 2"
+                      fill
+                      className="object-cover transition-opacity duration-300 group-hover:opacity-0"
+                      priority
+                      unoptimized
+                    />
+                    <Image
+                      src="/Lark-Studio/images/gallery/portrait2.gif"
+                      alt="갤러리 이미지 2 (움직이는)"
+                      fill
+                      className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      priority
+                      unoptimized
+                    />
+                  </>
+                )}
               </div>
             </div>
             <div className="relative group overflow-hidden rounded-lg shadow-lg">
               <div className="relative w-full h-[300px]">
-                <Image
-                  src="/Lark-Studio/images/gallery/portrait3-static.jpg"
-                  alt="갤러리 이미지 3"
-                  fill
-                  className="object-cover transition-opacity duration-300 group-hover:opacity-0"
-                  priority
-                  unoptimized
-                />
-                <Image
-                  src="/Lark-Studio/images/gallery/portrait3.gif"
-                  alt="갤러리 이미지 3 (움직이는)"
-                  fill
-                  className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  priority
-                  unoptimized
-                />
+                {isMobile ? (
+                  <Image
+                    src="/Lark-Studio/images/gallery/portrait3.gif"
+                    alt="갤러리 이미지 3"
+                    fill
+                    className="object-cover"
+                    priority
+                    unoptimized
+                  />
+                ) : (
+                  <>
+                    <Image
+                      src="/Lark-Studio/images/gallery/portrait3-static.jpg"
+                      alt="갤러리 이미지 3"
+                      fill
+                      className="object-cover transition-opacity duration-300 group-hover:opacity-0"
+                      priority
+                      unoptimized
+                    />
+                    <Image
+                      src="/Lark-Studio/images/gallery/portrait3.gif"
+                      alt="갤러리 이미지 3 (움직이는)"
+                      fill
+                      className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      priority
+                      unoptimized
+                    />
+                  </>
+                )}
               </div>
             </div>
           </div>

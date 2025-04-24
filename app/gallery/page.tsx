@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const galleryItems = [
@@ -14,6 +14,19 @@ const galleryItems = [
 ];
 
 export default function GalleryPage() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 py-20">
       <div className="container mx-auto px-4">
@@ -23,22 +36,35 @@ export default function GalleryPage() {
           {galleryItems.map((item) => (
             <div key={item.id} className="relative group overflow-hidden rounded-lg shadow-lg">
               <div className="relative w-full h-[400px]">
-                <Image
-                  src={`/Lark-Studio/images/gallery/${item.static}`}
-                  alt={`갤러리 이미지 ${item.id}`}
-                  fill
-                  className="object-cover transition-opacity duration-300 group-hover:opacity-0"
-                  priority={item.id <= 6}
-                  unoptimized
-                />
-                <Image
-                  src={`/Lark-Studio/images/gallery/${item.gif}`}
-                  alt={`갤러리 이미지 ${item.id} (움직이는)`}
-                  fill
-                  className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  priority={item.id <= 6}
-                  unoptimized
-                />
+                {isMobile ? (
+                  <Image
+                    src={`/Lark-Studio/images/gallery/${item.gif}`}
+                    alt={`갤러리 이미지 ${item.id}`}
+                    fill
+                    className="object-cover"
+                    priority={item.id <= 6}
+                    unoptimized
+                  />
+                ) : (
+                  <>
+                    <Image
+                      src={`/Lark-Studio/images/gallery/${item.static}`}
+                      alt={`갤러리 이미지 ${item.id}`}
+                      fill
+                      className="object-cover transition-opacity duration-300 group-hover:opacity-0"
+                      priority={item.id <= 6}
+                      unoptimized
+                    />
+                    <Image
+                      src={`/Lark-Studio/images/gallery/${item.gif}`}
+                      alt={`갤러리 이미지 ${item.id} (움직이는)`}
+                      fill
+                      className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      priority={item.id <= 6}
+                      unoptimized
+                    />
+                  </>
+                )}
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
                 <p className="text-white text-lg font-semibold">{item.title}</p>
@@ -49,7 +75,7 @@ export default function GalleryPage() {
 
         <div className="text-center mt-16">
           <p className="text-gray-600">
-            * 마우스를 올리면 Before/After를 확인하실 수 있습니다.
+            {isMobile ? '* 모바일에서는 자동으로 Before/After가 재생됩니다.' : '* 마우스를 올리면 Before/After를 확인하실 수 있습니다.'}
           </p>
         </div>
       </div>
