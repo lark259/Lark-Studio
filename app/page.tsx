@@ -66,6 +66,74 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 갤러리 미리보기 */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">작업 갤러리</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="relative group overflow-hidden rounded-lg">
+              <div className="aspect-w-4 aspect-h-3">
+                <Image
+                  src="/Lark-Studio/images/gallery/portrait1-static.jpg"
+                  alt="갤러리 이미지 1"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  priority
+                  unoptimized
+                />
+              </div>
+              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span className="text-white text-lg font-semibold">인물 보정</span>
+              </div>
+            </div>
+            <div className="relative group overflow-hidden rounded-lg">
+              <div className="aspect-w-4 aspect-h-3">
+                <Image
+                  src="/Lark-Studio/images/gallery/portrait2-static.jpg"
+                  alt="갤러리 이미지 2"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  priority
+                  unoptimized
+                />
+              </div>
+              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span className="text-white text-lg font-semibold">영정사진</span>
+              </div>
+            </div>
+            <div className="relative group overflow-hidden rounded-lg">
+              <div className="aspect-w-4 aspect-h-3">
+                <Image
+                  src="/Lark-Studio/images/gallery/portrait3-static.jpg"
+                  alt="갤러리 이미지 3"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  priority
+                  unoptimized
+                />
+              </div>
+              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span className="text-white text-lg font-semibold">프로필</span>
+              </div>
+            </div>
+          </div>
+          <div className="text-center">
+            <Link 
+              href="/gallery"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
+            >
+              <span>더 많은 작업물 보기</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 작업 과정 */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
