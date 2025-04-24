@@ -9,16 +9,8 @@ const galleryItems = [
   { id: 4, static: 'portrait4-static.jpg', gif: 'portrait4.gif', title: '인물 보정' },
   { id: 5, static: 'portrait5-static.jpg', gif: 'portrait5.gif', title: '프로필' },
   { id: 6, static: 'portrait6-static.jpg', gif: 'portrait6.gif', title: '영정사진' },
-  { id: 7, static: 'portrait7-static.jpg', gif: 'portrait7-static.gif', title: '인물 보정' },
-  { id: 8, static: 'portrait8-static.jpg', gif: 'portrait8-static.gif', title: '프로필' },
-  { id: 9, static: 'portrait9-static.jpg', gif: 'portrait9-static.gif', title: '영정사진' },
-  { id: 10, static: 'portrait10-static.jpg', gif: 'portrait10-static.gif', title: '인물 보정' },
-  { id: 11, static: 'portrait11-static.jpg', gif: 'portrait11-static.gif', title: '프로필' },
-  { id: 12, static: 'portrait12-static.jpg', gif: 'portrait12-static.gif', title: '인물 보정' },
-  { id: 13, static: 'portrait13-static.jpg', gif: 'portrait13-static.gif', title: '프로필' },
-  { id: 14, static: 'portrait14-static.jpg', gif: 'portrait14-static.gif', title: '영정사진' },
-  { id: 15, static: 'portrait15-static.jpg', gif: 'portrait15-static.gif', title: '인물 보정' },
-  { id: 16, static: 'portrait16-static.jpg', gif: 'portrait16-static.gif', title: '프로필' }
+  { id: 7, static: 'portrait7-static.jpg', gif: 'portrait7.gif', title: '인물 보정' },
+  { id: 8, static: 'portrait8-static.jpg', gif: 'portrait8.gif', title: '프로필' }
 ];
 
 export default function GalleryPage() {
