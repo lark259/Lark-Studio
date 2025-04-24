@@ -74,10 +74,18 @@ export default function Home() {
             <div className="relative group overflow-hidden rounded-lg shadow-lg">
               <div className="relative w-full h-[300px]">
                 <Image
-                  src="/Lark-Studio/images/gallery/portrait10-static.jpg"
+                  src="/Lark-Studio/images/gallery/portrait1-static.jpg"
                   alt="갤러리 이미지 1"
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="object-cover transition-transform duration-300 group-hover:opacity-0"
+                  priority
+                  unoptimized
+                />
+                <Image
+                  src="/Lark-Studio/images/gallery/portrait1.gif"
+                  alt="갤러리 이미지 1 (움직이는)"
+                  fill
+                  className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   priority
                   unoptimized
                 />
@@ -89,10 +97,18 @@ export default function Home() {
             <div className="relative group overflow-hidden rounded-lg shadow-lg">
               <div className="relative w-full h-[300px]">
                 <Image
-                  src="/Lark-Studio/images/gallery/portrait11-static.jpg"
+                  src="/Lark-Studio/images/gallery/portrait2-static.jpg"
                   alt="갤러리 이미지 2"
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="object-cover transition-transform duration-300 group-hover:opacity-0"
+                  priority
+                  unoptimized
+                />
+                <Image
+                  src="/Lark-Studio/images/gallery/portrait2.gif"
+                  alt="갤러리 이미지 2 (움직이는)"
+                  fill
+                  className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   priority
                   unoptimized
                 />
@@ -104,10 +120,18 @@ export default function Home() {
             <div className="relative group overflow-hidden rounded-lg shadow-lg">
               <div className="relative w-full h-[300px]">
                 <Image
-                  src="/Lark-Studio/images/gallery/portrait9-static.jpg"
+                  src="/Lark-Studio/images/gallery/portrait3-static.jpg"
                   alt="갤러리 이미지 3"
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="object-cover transition-transform duration-300 group-hover:opacity-0"
+                  priority
+                  unoptimized
+                />
+                <Image
+                  src="/Lark-Studio/images/gallery/portrait3.gif"
+                  alt="갤러리 이미지 3 (움직이는)"
+                  fill
+                  className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   priority
                   unoptimized
                 />
