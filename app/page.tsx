@@ -77,7 +77,7 @@ export default function Home() {
                   src="/Lark-Studio/images/gallery/portrait1-static.jpg"
                   alt="갤러리 이미지 1"
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:opacity-0"
+                  className="object-cover transition-opacity duration-300 group-hover:opacity-0"
                   priority
                   unoptimized
                 />
@@ -90,9 +90,6 @@ export default function Home() {
                   unoptimized
                 />
               </div>
-              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">인물 보정</span>
-              </div>
             </div>
             <div className="relative group overflow-hidden rounded-lg shadow-lg">
               <div className="relative w-full h-[300px]">
@@ -100,7 +97,7 @@ export default function Home() {
                   src="/Lark-Studio/images/gallery/portrait2-static.jpg"
                   alt="갤러리 이미지 2"
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:opacity-0"
+                  className="object-cover transition-opacity duration-300 group-hover:opacity-0"
                   priority
                   unoptimized
                 />
@@ -113,9 +110,6 @@ export default function Home() {
                   unoptimized
                 />
               </div>
-              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">영정사진</span>
-              </div>
             </div>
             <div className="relative group overflow-hidden rounded-lg shadow-lg">
               <div className="relative w-full h-[300px]">
@@ -123,7 +117,7 @@ export default function Home() {
                   src="/Lark-Studio/images/gallery/portrait3-static.jpg"
                   alt="갤러리 이미지 3"
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:opacity-0"
+                  className="object-cover transition-opacity duration-300 group-hover:opacity-0"
                   priority
                   unoptimized
                 />
@@ -135,9 +129,6 @@ export default function Home() {
                   priority
                   unoptimized
                 />
-              </div>
-              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">프로필</span>
               </div>
             </div>
           </div>
