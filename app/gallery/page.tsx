@@ -3,26 +3,26 @@ import React from 'react';
 import Image from 'next/image';
 
 const galleryItems = [
-  { id: 1, image: 'portrait1-static.jpg', title: '인물 보정' },
-  { id: 2, image: 'portrait2-static.jpg', title: '영정사진' },
-  { id: 3, image: 'portrait3-static.jpg', title: '프로필' },
-  { id: 4, image: 'portrait4-static.jpg', title: '인물 보정' },
-  { id: 5, image: 'portrait5-static.jpg', title: '프로필' },
-  { id: 6, image: 'portrait6-static.jpg', title: '영정사진' },
-  { id: 7, image: 'portrait7-static.jpg', title: '인물 보정' },
-  { id: 8, image: 'portrait8-static.jpg', title: '프로필' },
-  { id: 9, image: 'portrait9-static.jpg', title: '영정사진' },
-  { id: 10, image: 'portrait10-static.jpg', title: '인물 보정' },
-  { id: 11, image: 'portrait11-static.jpg', title: '프로필' },
-  { id: 12, image: 'portrait12-static.jpg', title: '인물 보정' },
-  { id: 13, image: 'portrait13-static.jpg', title: '프로필' },
-  { id: 14, image: 'portrait14-static.jpg', title: '영정사진' },
-  { id: 15, image: 'portrait15-static.jpg', title: '인물 보정' },
-  { id: 16, image: 'portrait16-static.jpg', title: '프로필' },
-  { id: 17, image: 'portrait17-static.jpg', title: '영정사진' },
-  { id: 18, image: 'portrait18-static.jpg', title: '인물 보정' },
-  { id: 19, image: 'portrait19-static.jpg', title: '프로필' },
-  { id: 20, image: 'portrait20-static.jpg', title: '영정사진' },
+  { id: 1, static: 'portrait1-static.jpg', gif: 'portrait1.gif', title: '인물 보정' },
+  { id: 2, static: 'portrait2-static.jpg', gif: 'portrait2.gif', title: '영정사진' },
+  { id: 3, static: 'portrait3-static.jpg', gif: 'portrait3.gif', title: '프로필' },
+  { id: 4, static: 'portrait4-static.jpg', gif: 'portrait4.gif', title: '인물 보정' },
+  { id: 5, static: 'portrait5-static.jpg', gif: 'portrait5.gif', title: '프로필' },
+  { id: 6, static: 'portrait6-static.jpg', gif: 'portrait6.gif', title: '영정사진' },
+  { id: 7, static: 'portrait7-static.jpg', gif: 'portrait7.gif', title: '인물 보정' },
+  { id: 8, static: 'portrait8-static.jpg', gif: 'portrait8.gif', title: '프로필' },
+  { id: 9, static: 'portrait9-static.jpg', gif: 'portrait9.gif', title: '영정사진' },
+  { id: 10, static: 'portrait10-static.jpg', gif: 'portrait10.gif', title: '인물 보정' },
+  { id: 11, static: 'portrait11-static.jpg', gif: 'portrait11.gif', title: '프로필' },
+  { id: 12, static: 'portrait12-static.jpg', gif: 'portrait12.gif', title: '인물 보정' },
+  { id: 13, static: 'portrait13-static.jpg', gif: 'portrait13.gif', title: '프로필' },
+  { id: 14, static: 'portrait14-static.jpg', gif: 'portrait14.gif', title: '영정사진' },
+  { id: 15, static: 'portrait15-static.jpg', gif: 'portrait15.gif', title: '인물 보정' },
+  { id: 16, static: 'portrait16-static.jpg', gif: 'portrait16.gif', title: '프로필' },
+  { id: 17, static: 'portrait17-static.jpg', gif: 'portrait17.gif', title: '영정사진' },
+  { id: 18, static: 'portrait18-static.jpg', gif: 'portrait18.gif', title: '인물 보정' },
+  { id: 19, static: 'portrait19-static.jpg', gif: 'portrait19.gif', title: '프로필' },
+  { id: 20, static: 'portrait20-static.jpg', gif: 'portrait20.gif', title: '영정사진' },
 ];
 
 export default function GalleryPage() {
@@ -36,10 +36,18 @@ export default function GalleryPage() {
             <div key={item.id} className="relative group overflow-hidden rounded-lg shadow-lg">
               <div className="relative w-full h-[400px]">
                 <Image
-                  src={`/Lark-Studio/images/gallery/${item.image}`}
+                  src={`/Lark-Studio/images/gallery/${item.static}`}
                   alt={`갤러리 이미지 ${item.id}`}
                   fill
-                  className="object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
+                  className="object-cover transition-opacity duration-300 group-hover:opacity-0"
+                  priority={item.id <= 6}
+                  unoptimized
+                />
+                <Image
+                  src={`/Lark-Studio/images/gallery/${item.gif}`}
+                  alt={`갤러리 이미지 ${item.id} (움직이는)`}
+                  fill
+                  className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   priority={item.id <= 6}
                   unoptimized
                 />
@@ -53,7 +61,7 @@ export default function GalleryPage() {
 
         <div className="text-center mt-16">
           <p className="text-gray-600">
-            * 마우스를 올리면 이미지가 확대됩니다.
+            * 마우스를 올리면 Before/After를 확인하실 수 있습니다.
           </p>
         </div>
       </div>
