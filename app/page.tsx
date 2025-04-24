@@ -66,6 +66,76 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 작업 과정 */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">작업 과정</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center relative">
+              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">📝</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">1. 상담</h3>
+              <p className="text-gray-600">작업 요청사항 상담 및<br />견적 안내</p>
+              {/* 화살표 (데스크톱에서만 표시) */}
+              <div className="hidden md:block absolute top-10 -right-4 w-8 h-8 text-gray-400">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+
+            <div className="text-center relative">
+              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">💳</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">2. 결제</h3>
+              <p className="text-gray-600">간편하고 안전한<br />결제 진행</p>
+              {/* 화살표 (데스크톱에서만 표시) */}
+              <div className="hidden md:block absolute top-10 -right-4 w-8 h-8 text-gray-400">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+
+            <div className="text-center relative">
+              <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">✨</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">3. 작업</h3>
+              <p className="text-gray-600">전문가의 섬세한<br />보정 작업</p>
+              {/* 화살표 (데스크톱에서만 표시) */}
+              <div className="hidden md:block absolute top-10 -right-4 w-8 h-8 text-gray-400">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">✅</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">4. 완료</h3>
+              <p className="text-gray-600">결과물 전달 및<br />피드백 반영</p>
+            </div>
+          </div>
+
+          <div className="text-center mt-16">
+            <Link 
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              <span>지금 상담하기</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 연락처 정보 */}
       <section className="bg-gray-50 py-12">
         <div className="container mx-auto px-4 max-w-4xl">
