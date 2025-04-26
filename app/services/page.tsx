@@ -19,7 +19,7 @@ export default function Services() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">기본 보정 – 5,000원</h3>
-                <ul className="list-inside space-y-2 text-gray-700">
+                <ul className="list-inside space-y-2 text-gray-900">
                   <li>▪ 피부 잡티 제거, 뽀샤시 효과</li>
                   <li>▪ 밝기 / 색감 / 대비 조정</li>
                   <li>▪ 간단한 주름 제거</li>
@@ -28,7 +28,7 @@ export default function Services() {
 
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">고급 편집 – 10,000원</h3>
-                <ul className="list-inside space-y-2 text-gray-700">
+                <ul className="list-inside space-y-2 text-gray-900">
                   <li>▪ 얼굴형, 체형 슬림 보정</li>
                   <li>▪ 눈, 코, 턱선 비율 조정</li>
                   <li>▪ 헤어라인 정리</li>
@@ -41,7 +41,7 @@ export default function Services() {
 
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">합성 작업 – 15,000원</h3>
-                <ul className="list-inside space-y-2 text-gray-700">
+                <ul className="list-inside space-y-2 text-gray-900">
                   <li>▪ 배경 합성 (스튜디오 느낌, 풍경 등)</li>
                   <li>▪ 인물 합성 (여러 컷 합쳐 하나로)</li>
                   <li>▪ 얼굴 교체, 표정 교체</li>
@@ -83,17 +83,17 @@ export default function Services() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">8인치 액자 포함 – 120,000원</h3>
-                <p className="text-gray-700">(사진 편집 + 8인치 사진 인화 + 액자)</p>
+                <p className="text-gray-900">(사진 편집 + 8인치 사진 인화 + 액자)</p>
               </div>
 
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">11인치 액자 포함 – 150,000원</h3>
-                <p className="text-gray-700">(사진 편집 + 11인치 사진 인화 + 액자)</p>
+                <p className="text-gray-900">(사진 편집 + 11인치 사진 인화 + 액자)</p>
               </div>
 
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">8/11인치 액자 포함 – 180,000원</h3>
-                <p className="text-gray-700">(사진 편집 + 8/11인치 사진 인화 + 액자)</p>
+                <p className="text-gray-900">(사진 편집 + 8/11인치 사진 인화 + 액자)</p>
               </div>
             </div>
           </section>
@@ -108,12 +108,12 @@ export default function Services() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">증명사진 촬영 – 25,000원</h3>
-                <p className="text-gray-700">(9장 인화 및 파일 제공)</p>
+                <p className="text-gray-900">(9장 인화 및 파일 제공)</p>
               </div>
 
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">프로필 사진 촬영 – 100,000원</h3>
-                <p className="text-gray-700">(30분 촬영 보정본3장 제공 및 파일 제공)</p>
+                <p className="text-gray-900">(30분 촬영 보정본3장 제공 및 파일 제공)</p>
               </div>
             </div>
           </section>
@@ -129,19 +129,19 @@ export default function Services() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <h3 className="font-semibold">4x6</h3>
-                  <p className="text-gray-700">1,000원</p>
+                  <p className="text-gray-900">1,000원</p>
                 </div>
                 <div>
                   <h3 className="font-semibold">5x7</h3>
-                  <p className="text-gray-700">2,000원</p>
+                  <p className="text-gray-900">2,000원</p>
                 </div>
                 <div>
                   <h3 className="font-semibold">8x10</h3>
-                  <p className="text-gray-700">10,000원</p>
+                  <p className="text-gray-900">10,000원</p>
                 </div>
                 <div>
                   <h3 className="font-semibold">11x14</h3>
-                  <p className="text-gray-700">15,000원</p>
+                  <p className="text-gray-900">15,000원</p>
                 </div>
               </div>
             </div>
